@@ -1,0 +1,30 @@
+
+check_constraint(?Cons,successful(?Cons)):- constraint(?Cons).
+
+check_constraint(?Cons,failure(?Cons)):- 
+   \naf constraint(?Cons).
+
+check_constraints([],[]).
+
+check_constraints([?H|?T],[?F|?R]):- 
+   check_constraint(?H,?F), 
+   check_constraints(?T,?R).
+
+check_constraints:- 
+   constraints(?C), 
+   check_constraints(?C,?R),
+   verify_results(?R).
+
+verify_results([]).
+
+verify_results([successful(?C)|?T]):- 
+   writeln(successful(?C)), 
+   verify_results(?T).
+
+verify_results([failure(?C)|?T]):-
+    writeln(failure(?C)),
+    verify_results(?T).
+
+
+
+

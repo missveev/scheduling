@@ -1,0 +1,25 @@
+#include "flrheader.flh"
+#define FLORA_COMPILATION_ID 11
+
+
+FLORA_THIS_WORKSPACE(mvd)(request_civil123_2,groupNumber,2,__newcontextvar16).
+FLORA_THIS_WORKSPACE(mvd)(request_civil123_2,ofCourse,civil123,__newcontextvar17).
+FLORA_THIS_WORKSPACE(mvd)(request_civil123_2,maxStudentSize,40,__newcontextvar18).
+FLORA_THIS_WORKSPACE(mvd)(request_civil123_2,year,2019,__newcontextvar19).
+FLORA_THIS_WORKSPACE(mvd)(request_civil123_2,forProgram,'Undergraduate',__newcontextvar20).
+FLORA_THIS_WORKSPACE(mvd)(request_civil123_2,semester,'FALL',__newcontextvar21).
+FLORA_THIS_WORKSPACE(isa)(request_civil123_2,'CourseOpeningRequest',__newcontextvar22).
+FLORA_THIS_WORKSPACE(mvd)(request_civil125_2,groupNumber,2,__newcontextvar16).
+FLORA_THIS_WORKSPACE(mvd)(request_civil125_2,ofCourse,civil125,__newcontextvar17).
+FLORA_THIS_WORKSPACE(mvd)(request_civil125_2,maxStudentSize,40,__newcontextvar18).
+FLORA_THIS_WORKSPACE(mvd)(request_civil125_2,year,2019,__newcontextvar19).
+FLORA_THIS_WORKSPACE(mvd)(request_civil125_2,forProgram,'Undergraduate',__newcontextvar20).
+FLORA_THIS_WORKSPACE(mvd)(request_civil125_2,semester,'FALL',__newcontextvar21).
+FLORA_THIS_WORKSPACE(isa)(request_civil125_2,'CourseOpeningRequest',__newcontextvar22).
+FLORA_THIS_WORKSPACE(mvd)(request_civil234_1,groupNumber,1,__newcontextvar16).
+FLORA_THIS_WORKSPACE(mvd)(request_civil234_1,ofCourse,civil234,__newcontextvar17).
+FLORA_THIS_WORKSPACE(mvd)(request_civil234_1,maxStudentSize,30,__newcontextvar18).
+FLORA_THIS_WORKSPACE(mvd)(request_civil234_1,year,2019,__newcontextvar19).
+FLORA_THIS_WORKSPACE(mvd)(request_civil234_1,forProgram,'Undergraduate',__newcontextvar20).
+FLORA_THIS_WORKSPACE(mvd)(request_civil234_1,semester,'FALL',__newcontextvar21).
+FLORA_THIS_WORKSPACE(isa)(request_civil234_1,'CourseOpeningRequest',__newcontextvar22).

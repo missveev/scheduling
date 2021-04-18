@@ -1,0 +1,401 @@
+// ['D://Flora//generate_meeting_times8b.flr'].
+// ['C://Users//bayram//OneDrive//ErgoCode//Imren//generate_meeting_times8c.flr'].
+//['C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//generate_meeting_times8c.flr'].
+
+//?- newmodule{m1}.
+//?- newmodule{m2}.
+//mode(debugGMT).
+
+mode(normal).
+
+// obj[%pp_self]@\pp.
+
+
+%r:- [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//classroom_instances'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//Concepts'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//address_instances'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//course_instances'],
+    //[ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//room_day_period_instances'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//instances'],
+    //[ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//course_opening_instances'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//CourseCodes'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//utilities'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//course_opening_requests'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//constraints'],
+    [ +'C://Users//reslab//Documents//NetBeansProjects//pamthesis//src//java//timetable1//empty'>>m1].
+true.
+
+
+
+// MAKE ALL PREDICATES TRANSACTIONAL BY PUTTING %
+
+
+
+
+/*
+sonra ugras
+
+insertCMPE400CourseOpening(?ModuleName,?Year, ?Semester):-
+                                        t_insert{cmpe400CO[groupNo -> 1,
+                                                           ofCourse -> cmpe400,
+                                                           year -> ?Year,
+                                                           semester -> ?Sem            
+                                                           ]:CourseOpening}@ModuleName.  
+
+
+*/
+%t_single_insert4(?ModuleName, (?COR,[?Room1,?Day1,?Period1],[?Room2,?Day2,?Period2],[?Room3,?Day3,?Period3],[?Room4,?Day4,?Period4])):-
+                            ?COR[groupNumber -> ?GN,
+                                   ofCourse -> ?Course,
+                                   year -> ?Year,
+                                   //maxStudentSize -> ?Z,
+                                   semester -> ?Sem],
+                              
+                              newoid{?CO},
+                              // writeln(1)@\prolog,
+                              //  !,
+                             newoid{?RDPD1},
+                             newoid{?RDPD2},
+                             newoid{?RDPD3},
+                             newoid{?RDPD4}, 
+
+                             t_insert{?RDPD1[room -> ?Room1,
+                                          day -> ?Day1,
+                                          period -> ?Period1,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+                             t_insert{?RDPD2[room -> ?Room2,
+                                          day -> ?Day2,
+                                          period -> ?Period2,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+                             t_insert{?RDPD3[room -> ?Room3,
+                                          day -> ?Day3,
+                                          period -> ?Period3,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+                             t_insert{?RDPD4[room -> ?Room4,
+                                          day -> ?Day4,
+                                          period -> ?Period4,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+
+                             t_insert{?CO[groupNo -> ?GN,
+                                        ofCourse -> ?Course,
+                                        year -> ?Year,
+                                        semester -> ?Sem,             
+                                        teachingTimes -> ?RDPD1,
+                                        teachingTimes -> ?RDPD2,
+                                        teachingTimes -> ?RDPD3,
+                                        teachingTimes -> ?RDPD4  ]:CourseOpening}@?ModuleName.  //CourseOpening   
+
+%t_single_insert3(?ModuleName, (?COR,[?Room1,?Day1,?Period1],[?Room2,?Day2,?Period2],[?Room3,?Day3,?Period3])):-
+                            ?COR[groupNumber -> ?GN,
+                                   ofCourse -> ?Course,
+                                   year -> ?Year,
+                                   //maxStudentSize -> ?Z,
+                                   semester -> ?Sem],
+                              
+                              newoid{?CO},
+                              // writeln(1)@\prolog,
+                              //  !,
+                             newoid{?RDPD1},
+                             newoid{?RDPD2},
+                             newoid{?RDPD3},
+                             
+
+                             t_insert{?RDPD1[room -> ?Room1,
+                                          day -> ?Day1,
+                                          period -> ?Period1,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+                             t_insert{?RDPD2[room -> ?Room2,
+                                          day -> ?Day2,
+                                          period -> ?Period2,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+                             t_insert{?RDPD3[room -> ?Room3,
+                                          day -> ?Day3,
+                                          period -> ?Period3,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration                             
+
+
+                             t_insert{?CO[groupNo -> ?GN,
+                                        ofCourse -> ?Course,
+                                        year -> ?Year,
+                                        semester -> ?Sem,             
+                                        teachingTimes -> ?RDPD1,
+                                        teachingTimes -> ?RDPD2,
+                                        teachingTimes -> ?RDPD3 ]:CourseOpening}@?ModuleName.  //CourseOpening   
+
+
+%t_single_insert0(?ModuleName, ?COR):-
+                            ?COR[groupNumber -> ?GN,
+                                   ofCourse -> ?Course,
+                                   year -> ?Year,
+                                   //maxStudentSize -> ?Z,
+                                   semester -> ?Sem],
+                              
+                              newoid{?CO},
+                           
+
+                             t_insert{?CO[groupNo -> ?GN,
+                                        ofCourse -> ?Course,
+                                        year -> ?Year,
+                                        semester -> ?Sem
+                                        ]:CourseOpening}@?ModuleName.  //CourseOpening   
+
+%t_single_insert2(?ModuleName, (?COR,[?Room1,?Day1,?Period1],[?Room2,?Day2,?Period2])):-
+                            ?COR[groupNumber -> ?GN,
+                                   ofCourse -> ?Course,
+                                   year -> ?Year,
+                                   //maxStudentSize -> ?Z,
+                                   semester -> ?Sem],
+                              
+                              newoid{?CO},
+                              // writeln(1)@\prolog,
+                              //  !,
+                             newoid{?RDPD1},
+                             newoid{?RDPD2},                                                        
+
+                             t_insert{?RDPD1[room -> ?Room1,
+                                          day -> ?Day1,
+                                          period -> ?Period1,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration
+
+                             t_insert{?RDPD2[room -> ?Room2,
+                                          day -> ?Day2,
+                                          period -> ?Period2,
+                                          duration -> 1 ]:RoomDayPeriodDuration}@?ModuleName,  //RoomDayPeriodDuration                                                        
+
+                             t_insert{?CO[groupNo -> ?GN,
+                                        ofCourse -> ?Course,
+                                        year -> ?Year,
+                                        semester -> ?Sem,             
+                                        teachingTimes -> ?RDPD1,
+                                        teachingTimes -> ?RDPD2]:CourseOpening}@?ModuleName.  //CourseOpening   
+
+
+
+//requested_courses([request_418_1, request_318_1,request_318_2, request_324_1, request_344_1,request_344_2, request_354_1]).
+
+requested_courses(?RQL,?Year, ?Semester):- ?RQL=setof{?RQ | ?RQ:CourseOpeningRequest, ?RQ[year->?Year,semester->?Semester]}.
+
+//requested_courses([request_318]).
+//requested_courses([]).
+
+// call as: ?Z=setof{?X|%run(?X)} for all the answers
+
+
+// ?Year=2014, ?Semester=spring, %generateOneByOne(?Year,?Semester,?Course,?GN,?Room,?Day,?Period).
+%generateOneByOne(?Year,?Semester,?Course,?GN,?Room,?Day,?Period):-
+        %t_del(m1,RoomDayPeriodDuration),        
+        %t_del(m1, CourseOpening),           
+       requested_courses(?CourseRequests,?Year,?Semester),
+       writeln(courserequests-?CourseRequests)@\prolog,	   
+       %generate_times(?CourseRequests),  
+       !,
+	   ?_X[groupNo -> ?GN,
+           ofCourse -> ?Course,
+            year -> ?Year,
+            semester -> ?Semester,             
+            teachingTimes -> ?RDPD]:CourseOpening@m1, 
+            ?RDPD[room->?Room, day->?Day, period->?Period]@m1.
+           
+       
+
+%runFirstSolution(?TA,?Year,?Semester):- 
+       \if (mode(debugGMT)) \then writeln(RFS1)@\prolog,
+       %t_del(m1,RoomDayPeriodDuration),
+        \if (mode(debugGMT)) \then writeln(RFS2)@\prolog,
+       %t_del(m1, CourseOpening), 
+          \if (mode(debugGMT)) \then writeln(RFS3)@\prolog,
+       requested_courses(?CourseRequests,?Year,?Semester),
+         \if (mode(debugGMT)) \then (writeln(RFS4)@\prolog, writeln(courserequests-?CourseRequests)@\prolog),
+       %generate_times(?CourseRequests),
+          \if (mode(debugGMT)) \then writeln(RFS5)@\prolog,
+       !,
+       %gen(?TA),
+          \if (mode(debugGMT)) \then writeln(RFS6)@\prolog.
+       // %printlist(?TA).
+  
+%runAllSolutions(?TA,?Year,?Semester):- 
+       %t_del(m1,RoomDayPeriodDuration),
+       %t_del(m1, CourseOpening), 
+       requested_courses(?CourseRequests,?Year,?Semester),
+       %generate_times(?CourseRequests),
+       %gen(?TA),
+       %printlist(?TA).
+
+%gen(?TA):- ?TA=setof{ ?Z| ?_X[groupNo -> ?GN,
+                             ofCourse -> ?Course,
+                             year -> ?Year,
+                             semester -> ?Sem,             
+                             teachingTimes -> ?RDPD]:CourseOpening@m1, 
+                             ?RDPD[room->?Room, day->?Day, period->?Period]@m1, 
+                             ?Z=[?Course,?GN,?Year,?Sem,?Room, ?Day, ?Period]}.
+               
+
+%generate_times([]).
+
+%generate_times([?CR|?CRs]):- 
+                  ?CR[ofCourse->?_CRSE[lecture_hours->?LectureHours]],
+                  ?LectureHours = 0,
+                  !,
+                  %t_single_insert0(m1,?CR),                                                                     
+                  %generate_times(?CRs).
+
+%generate_times([?CR|?CRs]):- 
+                   \if (mode(debugGMT)) \then writeln(GT1)@\prolog,
+
+                  ?CR[ofCourse->?CRSE[lecture_hours->?LectureHours]:Course,                       
+                      maxStudentSize -> ?MaxStudentSize,
+                      forProgram -> ?Program]:CourseOpeningRequest,
+
+                    \if (mode(debugGMT)) \then writeln(GT2)@\prolog,
+
+                   ?ClassRoom1: Classroom[capacity -> ?Capacity1],
+			 ?MaxStudentSize =< ?Capacity1,
+                   
+                   \if (?LectureHours=2) \then ?Day1:Day,
+                   \if (?LectureHours=3 ; ?LectureHours=4) \then before(?Day1,?Day2),
+
+                     \if (mode(debugGMT)) \then writeln(GT3)@\prolog,
+
+                   doublePeriod(?Period11,?Period12),
+
+                   ?PossibleAllocation1a= [?ClassRoom1, ?Day1, ?Period11],                   
+                   \+( %alreadyTakenRDPD(?ClassRoom1, ?Day1, ?Period11 )), 
+
+                   \if (mode(debugGMT)) 
+                       \then (writeln([Testing, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day1, ?Period11])@\prolog,get(?_X2)@\prolog),
+
+                   \+( %clashesWithSameYearCourse( ?Program,?CRSE, ?Day1, ?Period11)),
+
+                   \if (mode(debugGMT)) 
+                        \then (writeln([Success, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day1, ?Period11])@\prolog,get(?_X2)@\prolog),
+       
+
+                   \+( %onWednesdayAfternoon(?Day1, ?Period11)),
+
+
+                   ?PossibleAllocation1b= [?ClassRoom1, ?Day1, ?Period12],
+                   \+( %alreadyTakenRDPD(?ClassRoom1, ?Day1, ?Period12 )), 
+
+
+                    \if (mode(debugGMT)) 
+                       \then (writeln([Testing, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day1, ?Period12])@\prolog,get(?_X2)@\prolog),
+
+                   \+( %clashesWithSameYearCourse( ?Program,?CRSE,?Day1, ?Period12)),
+
+                   \if (mode(debugGMT)) 
+                        \then (writeln([Success, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day1, ?Period12])@\prolog,get(?_X2)@\prolog),
+              
+
+
+                   \+( %onWednesdayAfternoon(?Day1, ?Period12)),
+
+                  \if (mode(debugGMT)) \then writeln(GT4)@\prolog,
+                   
+                   \if (?LectureHours=2) 
+                     \then
+                         %t_single_insert2(m1,(?CR,?PossibleAllocation1a,?PossibleAllocation1b)),
+
+
+                   \if (?LectureHours=3 ; ?LectureHours=4) 
+                       \then 
+                          ( ?ClassRoom2: Classroom[capacity -> ?Capacity2],
+			          ?MaxStudentSize =< ?Capacity2
+                          ),
+
+                 \if (mode(debugGMT)) \then writeln(GT5)@\prolog,
+
+                  \if (?LectureHours=3) 
+                         \then (
+                                    period(?Period21),                                    
+                                    ?PossibleAllocation2a= [?ClassRoom2, ?Day2, ?Period21],
+                                    \+( %alreadyTakenRDPD(?ClassRoom2, ?Day2, ?Period21 )), 
+
+                                    \if (mode(debugGMT)) 
+                                     \then (writeln([Testing, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day2, ?Period21])@\prolog,get(?_X2)@\prolog),
+
+                                    \+( %clashesWithSameYearCourse( ?Program, ?CRSE,?Day2, ?Period21)),
+
+                                   \if (mode(debugGMT)) 
+                                   \then (writeln([Success, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day2, ?Period21])@\prolog,get(?_X2)@\prolog),
+                                  
+
+
+                                    \+( %onWednesdayAfternoon(?Day2, ?Period21)),
+                                     %t_single_insert3(m1,(?CR,?PossibleAllocation1a,?PossibleAllocation1b, 
+                                     ?PossibleAllocation2a))
+                                ),
+
+                \if (mode(debugGMT)) \then writeln(GT6)@\prolog,
+
+                  \if (?LectureHours=4) 
+                         \then (
+                                    doublePeriod(?Period21,?Period22),   
+
+                                   \if (mode(debugGMT)) \then writeln(GT61)@\prolog,
+
+                                    ?PossibleAllocation2a= [?ClassRoom2, ?Day2, ?Period21],
+
+                                    \if (mode(debugGMT)) \then writeln(GT62)@\prolog,
+
+                                    \+( %alreadyTakenRDPD(?ClassRoom2, ?Day2, ?Period21 )), 
+
+                                    \if (mode(debugGMT)) \then writeln(GT63)@\prolog,
+
+
+                                     \if (mode(debugGMT)) 
+                                     \then (writeln([Testing, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day2, ?Period21])@\prolog,get(?_X2)@\prolog),
+
+                                     \+( %clashesWithSameYearCourse( ?Program, ?CRSE,?Day2, ?Period21)),
+
+                                     \if (mode(debugGMT)) 
+                                     \then (writeln([Success, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day2, ?Period21])@\prolog,get(?_X2)@\prolog),
+                                   
+
+                                     \if (mode(debugGMT)) \then writeln(GT64)@\prolog,
+
+                                    \+( %onWednesdayAfternoon(?Day2, ?Period21)),
+
+                                    \if (mode(debugGMT)) \then writeln(GT65)@\prolog,
+
+
+                                    ?PossibleAllocation2b= [?ClassRoom2, ?Day2, ?Period22],
+                                    \+( %alreadyTakenRDPD(?ClassRoom2, ?Day2, ?Period22 )), 
+
+                                     \if (mode(debugGMT)) 
+                                     \then (writeln([Testing, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day2, ?Period22])@\prolog,get(?_X2)@\prolog ),
+
+
+                                    \+( %clashesWithSameYearCourse( ?Program, ?CRSE,?Day2, ?Period22)),
+        
+                                    \if (mode(debugGMT)) 
+                                    \then (writeln([Success, nott, '%clashesWithSameYearCourse', ?Program, ?CRSE, ?Day2, ?Period22])@\prolog,get(?_X2)@\prolog),
+                                  
+
+                                    \+( %onWednesdayAfternoon(?Day2, ?Period22)),
+                                     %t_single_insert4(m1,(?CR,?PossibleAllocation1a,?PossibleAllocation1b, 
+                                     ?PossibleAllocation2a, ?PossibleAllocation2b))
+                                ),
+                                            
+                  \if (mode(debugGMT)) \then writeln(GT7)@\prolog,                           
+
+                   %generate_times(?CRs).
+
+
+            
+///////////////////////////////////////////
+                   
+/* make each course request 4 course requests */                                                                                                                                         
+
+%t_del(?ModuleName, ?ConceptName):- t_deleteall{?_[?_->?_]:?ConceptName@?ModuleName}.
+
+%del(?ModuleName, ?ConceptName):- deleteall{?_[?_->?_]:?ConceptName@?ModuleName}.
+
+// del(?ModuleName):- deleteall{?_[?_->?_]:CourseOpening@?ModuleName}, deleteall{?_[?_->?_]:RoomDayPeriodDuration@?ModuleName}.
+
+

@@ -1,0 +1,554 @@
+/************************************************************************
+  file: includes/flrheader.flh
+
+  Author(s): Guizhen Yang
+	     Michael Kifer
+
+  Copyright (C) by
+       The Research Foundation of the State University of New York, 1999-2013.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+  This file is automatically included by the FLORA-2 compiler.
+************************************************************************/
+
+
+/************************************************************************
+  Note: This file should contain Macros only!
+
+  If FLORA_DUMP is defined: preprocessing for user-friendly output.
+
+  If any of these macros are changed, the corresponding wrappers in
+  flrwrapper.P must also be changed
+************************************************************************/
+
+
+
+
+/* File:      flora_prefix.flh -- FLORA-2 prefixes
+**
+** Author(s): Michael Kifer
+**	      Guizhen Yang
+**
+** Contact:   flora-users@lists.sourceforge.net
+**
+** Copyright (C) by
+**      The Research Foundation of the State University of New York, 1999-2018;
+**      and Vulcan, Inc., 2008-2013.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**      http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+**
+**
+*/
+
+
+/******************************************************************************
+  Flora prefix
+
+  All Flora symbols begin with this prefix.
+******************************************************************************/
+/* Prefix for F-logic and HiLog predicates */
+
+
+
+
+
+/******************************************************************************
+  Attaching FLORA_PREFIX
+
+  The argument to this Macro should be quoted.
+******************************************************************************/
+
+
+
+
+/******************************************************************************
+  Strings following FLORA_PREFIX
+
+  These strings should be quoted.
+******************************************************************************/
+/* Keep "mod" in the name of a formula wrapper right after FLORA_PREFIX
+   We rely on this to identify meta wrappers */
+
+
+
+/*  Trie for keeping skeletons of defined facts -- debugging */
+
+
+/*  Trie for storing used symbols names */
+
+
+
+
+/******************************************************************************
+  Module and trie prefixes
+******************************************************************************/
+/* prefix to construct Flora module predicates. */
+
+
+/*  prefix to name Flora storage trie for a module. */
+
+
+
+/* prefix to name Flora fld storage trie for a module. */
+
+
+/* prefix to name Flora fls storage trie for a module. */
+
+
+
+/****************************************************************************
+  F-logic atom prefixes for predicates that are used to distinguish F-logic
+  wrappers in the trailers, the user program, base facts, etc.
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes of F-logic wrappers
+******************************************************************************/
+
+
+
+/****************************************************************************
+  Prefixes that are used for F-logic wrappers in rule bodies of user programs.
+  They are called "debuggin prefixes" because they were introduced to help
+  implement the debugging feature that catches undefined methods.
+  Note:
+     naf^, dyna^, dynz^ are the outermost prefixes
+     neg^ is the next outermost
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/* Prefixes used for checking undefinedness */
+
+
+
+/* Corresponding 1-arg macros */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* these are used in inheritance closure axioms *******/
+
+
+
+
+
+
+
+
+
+/******* these are for transactions in LIBMOD *******/
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes that are used in the wrappers to the left of module name
+
+  Note: We need to remember that these prefixes are enclosed in quotes.
+        But we need the actual atom length that Prolog uses. So, we deduct 2.
+******************************************************************************/
+
+
+
+/* length of FLORA_PREFIX'FLORA_MODULE_TAG */
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% support for undefinedness checks
+
+
+%% used for generating new oids statically
+%% We had previously #1'FLORA_COMPILATION_ID', but this caused gpp error in
+%% \dump(file). Apparently a gpp bug. So changed to X'FLORA_COMPILATION_ID'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'_$_$_flora''mod''main''imvdsig'('RegistrationRequest',student,'Student',__newcontextvar14).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationRequest',student,0,*,__newcontextvar15).
+'_$_$_flora''mod''main''imvdsig'('RegistrationRequest',year,'\\integer',__newcontextvar16).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationRequest',year,0,*,__newcontextvar17).
+'_$_$_flora''mod''main''imvdsig'('RegistrationRequest',semester,'Semester',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationRequest',semester,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('SingleRegistrationResult',student,'Student',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('SingleRegistrationResult',student,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('SingleRegistrationResult',year,'\\integer',__newcontextvar20).
+'_$_$_flora''mod''main''imvdcondef'('SingleRegistrationResult',year,0,*,__newcontextvar21).
+'_$_$_flora''mod''main''imvdsig'('SingleRegistrationResult',semester,'Semester',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('SingleRegistrationResult',semester,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('SingleRegistrationResult',single_reg,'CourseOpening',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('SingleRegistrationResult',single_reg,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''imvdsig'('RegistrationResult',student,'Student',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationResult',student,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('RegistrationResult',year,'\\integer',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationResult',year,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''imvdsig'('RegistrationResult',semester,'Semester',__newcontextvar26).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationResult',semester,0,*,__newcontextvar27).
+'_$_$_flora''mod''main''imvdsig'('RegistrationResult',syllabusEntry,'SyllabusEntry',__newcontextvar28).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationResult',syllabusEntry,0,*,__newcontextvar29).
+'_$_$_flora''mod''main''imvdsig'('RegistrationResult',courseOpening,'CourseOpening',__newcontextvar30).
+'_$_$_flora''mod''main''imvdcondef'('RegistrationResult',courseOpening,0,*,__newcontextvar31).
+'_$_$_flora''mod''main''sub'('Student','Person',__newcontextvar4).
+'_$_$_flora''mod''main''imvdsig'('Student',yearEnrolled,'\\integer',__newcontextvar26).
+'_$_$_flora''mod''main''imvdcondef'('Student',yearEnrolled,0,*,__newcontextvar27).
+'_$_$_flora''mod''main''imvdsig'('Student',semesterEnrolled,'Semester',__newcontextvar28).
+'_$_$_flora''mod''main''imvdcondef'('Student',semesterEnrolled,0,*,__newcontextvar29).
+'_$_$_flora''mod''main''imvdsig'('Student',inProgram,'AcademicProgram',__newcontextvar30).
+'_$_$_flora''mod''main''imvdcondef'('Student',inProgram,0,*,__newcontextvar31).
+'_$_$_flora''mod''main''imvdsig'('Student',currentAcademicSemester,'\\integer',__newcontextvar32).
+'_$_$_flora''mod''main''imvdcondef'('Student',currentAcademicSemester,0,*,__newcontextvar33).
+'_$_$_flora''mod''main''imvdsig'('Student',mostRecentRealAcademicSemester,'\\integer',__newcontextvar34).
+'_$_$_flora''mod''main''imvdcondef'('Student',mostRecentRealAcademicSemester,0,*,__newcontextvar35).
+'_$_$_flora''mod''main''imvdsig'('Student',turkishOrForeign,'TurkishOrForeign',__newcontextvar36).
+'_$_$_flora''mod''main''imvdcondef'('Student',turkishOrForeign,0,*,__newcontextvar37).
+'_$_$_flora''mod''main''exists'('TurkishOrForeign',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('Day',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('Language',__newcontextvar4).
+'_$_$_flora''mod''main''imvdsig'('Course',courseCode,string,__newcontextvar34).
+'_$_$_flora''mod''main''imvdcondef'('Course',courseCode,0,*,__newcontextvar35).
+'_$_$_flora''mod''main''imvdsig'('Course',courseName,string,__newcontextvar36).
+'_$_$_flora''mod''main''imvdcondef'('Course',courseName,0,*,__newcontextvar37).
+'_$_$_flora''mod''main''imvdsig'('Course',hasPrerequisite,'Course',__newcontextvar38).
+'_$_$_flora''mod''main''imvdcondef'('Course',hasPrerequisite,0,*,__newcontextvar39).
+'_$_$_flora''mod''main''imvdsig'('Course',lecture_hours,'\\integer',__newcontextvar40).
+'_$_$_flora''mod''main''imvdcondef'('Course',lecture_hours,0,*,__newcontextvar41).
+'_$_$_flora''mod''main''imvdsig'('Course',lab_hours,'\\integer',__newcontextvar42).
+'_$_$_flora''mod''main''imvdcondef'('Course',lab_hours,0,*,__newcontextvar43).
+'_$_$_flora''mod''main''imvdsig'('Course',credits,'\\integer',__newcontextvar44).
+'_$_$_flora''mod''main''imvdcondef'('Course',credits,0,*,__newcontextvar45).
+'_$_$_flora''mod''main''imvdsig'('Course',instructionLanguage,'Language',__newcontextvar46).
+'_$_$_flora''mod''main''imvdcondef'('Course',instructionLanguage,0,*,__newcontextvar47).
+'_$_$_flora''mod''main''imvdsig'('Course',ects,'\\integer',__newcontextvar48).
+'_$_$_flora''mod''main''imvdcondef'('Course',ects,0,*,__newcontextvar49).
+'_$_$_flora''mod''main''sub'('AreaElective','Course',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmpeAreaElective','AreaElective',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmseAreaElective','AreaElective',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('BlgmAreaElective','AreaElective',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('UniversityElective','Course',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmpeUniversityElective','UniversityElective',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmseUniversityElective','UniversityElective',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('BlgmUniversityElective','UniversityElective',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('ScienceCourse','Course',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmpeScienceCourse','ScienceCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmseScienceCourse','ScienceCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('BlgmScienceCourse','ScienceCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('FinanceCourse','Course',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmpeFinanceCourse','FinanceCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmseFinanceCourse','FinanceCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('BlgmFinanceCourse','FinanceCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('EthicsCourse','Course',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmpeEthicsCourse','EthicsCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('CmseEthicsCourse','EthicsCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('BlgmEthicsCourse','EthicsCourse',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('TurkishCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('HistoryCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('TurkishOrHistoryCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeSummerTraining','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('NormalCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeEthicsCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeFinanceCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeScienceCourse','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeUniversityElective','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeAreaElective','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeGraduationProject1','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''isa'('CmpeGraduationProject2','CourseType',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('TurkishCourse','TurkishOrHistoryCourse',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('HistoryCourse','TurkishOrHistoryCourse',__newcontextvar4).
+'_$_$_flora''mod''main''imvdsig'('Syllabus',forProgram,'AcademicProgram',__newcontextvar10).
+'_$_$_flora''mod''main''imvdcondef'('Syllabus',forProgram,0,*,__newcontextvar11).
+'_$_$_flora''mod''main''imvdsig'('Syllabus',syllabusEntry,'SyllabusEntry',__newcontextvar12).
+'_$_$_flora''mod''main''imvdcondef'('Syllabus',syllabusEntry,0,*,__newcontextvar13).
+'_$_$_flora''mod''main''imvdsig'('SyllabusEntry',whichYear,'YearType',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('SyllabusEntry',whichYear,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('SyllabusEntry',whichSemester,'Semester',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('SyllabusEntry',whichSemester,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''imvdsig'('SyllabusEntry',referenceCode,'\\string',__newcontextvar26).
+'_$_$_flora''mod''main''imvdcondef'('SyllabusEntry',referenceCode,0,*,__newcontextvar27).
+'_$_$_flora''mod''main''imvdsig'('SyllabusEntry',course,'Course',__newcontextvar28).
+'_$_$_flora''mod''main''imvdcondef'('SyllabusEntry',course,0,*,__newcontextvar29).
+'_$_$_flora''mod''main''imvdsig'('SyllabusEntry',courseType,'CourseType',__newcontextvar30).
+'_$_$_flora''mod''main''imvdcondef'('SyllabusEntry',courseType,0,*,__newcontextvar31).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',syllabusEntry,'SyllabusEntry',__newcontextvar34).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',syllabusEntry,0,*,__newcontextvar35).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',actualCourse,'Course',__newcontextvar36).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',actualCourse,0,*,__newcontextvar37).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',courseTaken,'Course',__newcontextvar38).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',courseTaken,0,*,__newcontextvar39).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',letterGrade,'Grade',__newcontextvar40).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',letterGrade,0,*,__newcontextvar41).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',numeric_contribution,'\\float',__newcontextvar42).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',numeric_contribution,0,*,__newcontextvar43).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',credit_counted,'\\integer',__newcontextvar44).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',credit_counted,0,*,__newcontextvar45).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',flapply(computed_credit_counted,'\\integer'),'\\integer',__newcontextvar46).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',flapply(computed_credit_counted,'\\integer'),0,*,__newcontextvar47).
+'_$_$_flora''mod''main''imvdsig'('TranscriptEntry',flapply(computed_numeric_contribution,'\\integer'),'\\integer',__newcontextvar48).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptEntry',flapply(computed_numeric_contribution,'\\integer'),0,*,__newcontextvar49).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',whichYear,'\\integer',__newcontextvar66).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',whichYear,0,*,__newcontextvar67).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',whichSemester,'Semester',__newcontextvar68).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',whichSemester,0,*,__newcontextvar69).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',transcriptEntry,'TranscriptEntry',__newcontextvar70).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',transcriptEntry,0,*,__newcontextvar71).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',gpa,'\\float',__newcontextvar72).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',gpa,0,*,__newcontextvar73).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',cgpa,'\\float',__newcontextvar74).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',cgpa,0,*,__newcontextvar75).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',status,'Status',__newcontextvar76).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',status,0,*,__newcontextvar77).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',registrationStatus,'RegistrationStatus',__newcontextvar78).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',registrationStatus,0,*,__newcontextvar79).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',actualAcademicTerm,'\\integer',__newcontextvar80).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',actualAcademicTerm,0,*,__newcontextvar81).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',realAcademicTerm,'\\integer',__newcontextvar82).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',realAcademicTerm,0,*,__newcontextvar83).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',numeric_contribution,'\\float',__newcontextvar84).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',numeric_contribution,0,*,__newcontextvar85).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',flapply(computed_credit_counted,'\\integer'),'\\integer',__newcontextvar86).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',flapply(computed_credit_counted,'\\integer'),0,*,__newcontextvar87).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',flapply(computed_numeric_contribution,'\\integer'),'\\float',__newcontextvar88).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',flapply(computed_numeric_contribution,'\\integer'),0,*,__newcontextvar89).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',cumulative_credits,'\\float',__newcontextvar90).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',cumulative_credits,0,*,__newcontextvar91).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',cumulative_contribution,'\\float',__newcontextvar92).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',cumulative_contribution,0,*,__newcontextvar93).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',how_many_courses_remaining,'\\integer',__newcontextvar94).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',how_many_courses_remaining,0,*,__newcontextvar95).
+'_$_$_flora''mod''main''imvdsig'('TranscriptSemesterData',how_many_credited_courses_remaining,'\\integer',__newcontextvar96).
+'_$_$_flora''mod''main''imvdcondef'('TranscriptSemesterData',how_many_credited_courses_remaining,0,*,__newcontextvar97).
+'_$_$_flora''mod''main''imvdsig'('Transcript',student,'Student',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('Transcript',student,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('Transcript',syllabus,'Syllabus',__newcontextvar20).
+'_$_$_flora''mod''main''imvdcondef'('Transcript',syllabus,0,*,__newcontextvar21).
+'_$_$_flora''mod''main''imvdsig'('Transcript',semesterData,'TranscriptSemesterData',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('Transcript',semesterData,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('Transcript',registrationStatus,'RegistrationStatus',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('Transcript',registrationStatus,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''sub'('TurkishUndergraduateProgram','TurkishProgram',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('TurkishUndergraduateProgram','UndergraduateProgram',__newcontextvar4).
+'_$_$_flora''mod''main''imvdsig'('Department',deptName,string,__newcontextvar10).
+'_$_$_flora''mod''main''imvdcondef'('Department',deptName,0,*,__newcontextvar11).
+'_$_$_flora''mod''main''imvdsig'('Department',inFaculty,'Faculty',__newcontextvar12).
+'_$_$_flora''mod''main''imvdcondef'('Department',inFaculty,0,*,__newcontextvar13).
+'_$_$_flora''mod''main''imvdsig'('Instructor',works_in,'Department',__newcontextvar8).
+'_$_$_flora''mod''main''imvdcondef'('Instructor',works_in,0,*,__newcontextvar9).
+'_$_$_flora''mod''main''sub'('Instructor','Person',__newcontextvar10).
+'_$_$_flora''mod''main''imvdsig'('Classroom',location,'Building',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('Classroom',location,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('Classroom',capacity,'\\integer',__newcontextvar20).
+'_$_$_flora''mod''main''imvdcondef'('Classroom',capacity,0,*,__newcontextvar21).
+'_$_$_flora''mod''main''imvdsig'('Classroom',inDepartment,department,__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('Classroom',inDepartment,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('Classroom',roomNumber,'\\string',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('Classroom',roomNumber,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''imvdsig'('Person',id,'\\string',__newcontextvar30).
+'_$_$_flora''mod''main''imvdcondef'('Person',id,0,*,__newcontextvar31).
+'_$_$_flora''mod''main''imvdsig'('Person',gender,'Gender',__newcontextvar32).
+'_$_$_flora''mod''main''imvdcondef'('Person',gender,0,*,__newcontextvar33).
+'_$_$_flora''mod''main''imvdsig'('Person',date_of_birth,'\\date',__newcontextvar34).
+'_$_$_flora''mod''main''imvdcondef'('Person',date_of_birth,0,*,__newcontextvar35).
+'_$_$_flora''mod''main''imvdsig'('Person',name,'\\string',__newcontextvar36).
+'_$_$_flora''mod''main''imvdcondef'('Person',name,0,*,__newcontextvar37).
+'_$_$_flora''mod''main''imvdsig'('Person',lastName,'\\string',__newcontextvar38).
+'_$_$_flora''mod''main''imvdcondef'('Person',lastName,0,*,__newcontextvar39).
+'_$_$_flora''mod''main''imvdsig'('Person',address,'Address',__newcontextvar40).
+'_$_$_flora''mod''main''imvdcondef'('Person',address,0,*,__newcontextvar41).
+'_$_$_flora''mod''main''imvdsig'('Person',nationality,'Nationality',__newcontextvar42).
+'_$_$_flora''mod''main''imvdcondef'('Person',nationality,0,*,__newcontextvar43).
+'_$_$_flora''mod''main''exists'('Nationality',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('Gender',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('Grade',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('RealGrade','Grade',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('PassingGrade','Grade',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('FailingGrade','Grade',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('RegistrationStatus',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('NormalSyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('RestricredElectiveScienceSyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('RestricredElectiveFinanceSyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('AreaElectiveSyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('UniversityElectiveSyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('EthicsElectiveSyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('TurkishOrHistorySyllabusEntry','SyllabusEntry',__newcontextvar4).
+'_$_$_flora''mod''main''imvdsig'('Address',street,'\\string',__newcontextvar14).
+'_$_$_flora''mod''main''imvdcondef'('Address',street,0,*,__newcontextvar15).
+'_$_$_flora''mod''main''imvdsig'('Address',city,'\\string',__newcontextvar16).
+'_$_$_flora''mod''main''imvdcondef'('Address',city,0,*,__newcontextvar17).
+'_$_$_flora''mod''main''imvdsig'('Address',country,'\\string',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('Address',country,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('AcademicProgram',programName,'\\string',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('AcademicProgram',programName,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('AcademicProgram',programID,'\\string',__newcontextvar20).
+'_$_$_flora''mod''main''imvdcondef'('AcademicProgram',programID,0,*,__newcontextvar21).
+'_$_$_flora''mod''main''imvdsig'('AcademicProgram',syllabus,'Syllabus',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('AcademicProgram',syllabus,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('AcademicProgram',belongsTo,'Department',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('AcademicProgram',belongsTo,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''imvdsig'('University',universityName,'\\string',__newcontextvar10).
+'_$_$_flora''mod''main''imvdcondef'('University',universityName,0,*,__newcontextvar11).
+'_$_$_flora''mod''main''imvdsig'('University',locatedAt,'Address',__newcontextvar12).
+'_$_$_flora''mod''main''imvdcondef'('University',locatedAt,0,*,__newcontextvar13).
+'_$_$_flora''mod''main''imvdsig'('Faculty',facultyName,'\\string',__newcontextvar10).
+'_$_$_flora''mod''main''imvdcondef'('Faculty',facultyName,0,*,__newcontextvar11).
+'_$_$_flora''mod''main''imvdsig'('Faculty',atUniversity,'University',__newcontextvar12).
+'_$_$_flora''mod''main''imvdcondef'('Faculty',atUniversity,0,*,__newcontextvar13).
+'_$_$_flora''mod''main''imvdsig'('CourseOpening',groupNo,'\\integer',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpening',groupNo,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('CourseOpening',ofCourse,'Course',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpening',ofCourse,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''imvdsig'('CourseOpening',year,'\\integer',__newcontextvar26).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpening',year,0,*,__newcontextvar27).
+'_$_$_flora''mod''main''imvdsig'('CourseOpening',semester,'Semester',__newcontextvar28).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpening',semester,0,*,__newcontextvar29).
+'_$_$_flora''mod''main''imvdsig'('CourseOpening',teachingTimes,'RoomDayPeriodDuration',__newcontextvar30).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpening',teachingTimes,0,*,__newcontextvar31).
+'_$_$_flora''mod''main''imvdsig'('CourseOpeningRequest',howManyGroups,'\\integer',__newcontextvar26).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpeningRequest',howManyGroups,0,*,__newcontextvar27).
+'_$_$_flora''mod''main''imvdsig'('CourseOpeningRequest',ofCourse,'Course',__newcontextvar28).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpeningRequest',ofCourse,0,*,__newcontextvar29).
+'_$_$_flora''mod''main''imvdsig'('CourseOpeningRequest',year,'\\integer',__newcontextvar30).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpeningRequest',year,0,*,__newcontextvar31).
+'_$_$_flora''mod''main''imvdsig'('CourseOpeningRequest',maxStudentSize,'\\integer',__newcontextvar32).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpeningRequest',maxStudentSize,0,*,__newcontextvar33).
+'_$_$_flora''mod''main''imvdsig'('CourseOpeningRequest',semester,'Semester',__newcontextvar34).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpeningRequest',semester,0,*,__newcontextvar35).
+'_$_$_flora''mod''main''imvdsig'('CourseOpeningRequest',forProgram,'AcademicProgram',__newcontextvar36).
+'_$_$_flora''mod''main''imvdcondef'('CourseOpeningRequest',forProgram,0,*,__newcontextvar37).
+'_$_$_flora''mod''main''imvdsig'('Curriculum',academicProgram,'AcademicProgram',__newcontextvar14).
+'_$_$_flora''mod''main''imvdcondef'('Curriculum',academicProgram,0,*,__newcontextvar15).
+'_$_$_flora''mod''main''imvdsig'('Curriculum',refCode,'\\string',__newcontextvar16).
+'_$_$_flora''mod''main''imvdcondef'('Curriculum',refCode,0,*,__newcontextvar17).
+'_$_$_flora''mod''main''imvdsig'('Curriculum',courseName,'Course',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('Curriculum',courseName,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('CurrentEnrollmentSize',courseOpening,'CourseOpening',__newcontextvar10).
+'_$_$_flora''mod''main''imvdcondef'('CurrentEnrollmentSize',courseOpening,0,*,__newcontextvar11).
+'_$_$_flora''mod''main''imvdsig'('CurrentEnrollmentSize',currentSize,'\\integer',__newcontextvar12).
+'_$_$_flora''mod''main''imvdcondef'('CurrentEnrollmentSize',currentSize,0,*,__newcontextvar13).
+'_$_$_flora''mod''main''imvdsig'('TakesCourse',courseOpening,'CourseOpening',__newcontextvar14).
+'_$_$_flora''mod''main''imvdcondef'('TakesCourse',courseOpening,0,*,__newcontextvar15).
+'_$_$_flora''mod''main''imvdsig'('TakesCourse',student,'Student',__newcontextvar16).
+'_$_$_flora''mod''main''imvdcondef'('TakesCourse',student,0,*,__newcontextvar17).
+'_$_$_flora''mod''main''imvdsig'('TakesCourse',grade,'\\string',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('TakesCourse',grade,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''exists'('Building',__newcontextvar4).
+'_$_$_flora''mod''main''exists'('Semester',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('UndergraduateProgram','AcademicProgram',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('GraduateProgram','AcademicProgram',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('TurkishProgram','AcademicProgram',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('EnglishProgram','AcademicProgram',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('EnglishUndergraduateProgram','EnglishProgram',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('EnglishUndergraduateProgram','UndergraduateProgram',__newcontextvar4).
+'_$_$_flora''mod''main''imvdsig'('RoomDayPeriodDuration',room,'Classroom',__newcontextvar18).
+'_$_$_flora''mod''main''imvdcondef'('RoomDayPeriodDuration',room,0,*,__newcontextvar19).
+'_$_$_flora''mod''main''imvdsig'('RoomDayPeriodDuration',day,'Day',__newcontextvar20).
+'_$_$_flora''mod''main''imvdcondef'('RoomDayPeriodDuration',day,0,*,__newcontextvar21).
+'_$_$_flora''mod''main''imvdsig'('RoomDayPeriodDuration',period,'\\integer',__newcontextvar22).
+'_$_$_flora''mod''main''imvdcondef'('RoomDayPeriodDuration',period,0,*,__newcontextvar23).
+'_$_$_flora''mod''main''imvdsig'('RoomDayPeriodDuration',duration,'\\integer',__newcontextvar24).
+'_$_$_flora''mod''main''imvdcondef'('RoomDayPeriodDuration',duration,0,*,__newcontextvar25).
+'_$_$_flora''mod''main''sub'('LectureRoomDayPeriodDuration','RoomDayPeriodDuration',__newcontextvar4).
+'_$_$_flora''mod''main''sub'('LabRoomDayPeriodDuration','RoomDayPeriodDuration',__newcontextvar4).

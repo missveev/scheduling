@@ -1,0 +1,10 @@
+#include "flrheader.flh"
+#include "flr_fld_standardtypes.flh"
+
+#define FLORA_COMPILATION_ID 2
+
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Classroom',__fldnewvar2).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,capacity,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,inDepartment,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,location,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,roomNumber,__fldnewvar2,__fldnewvar3).

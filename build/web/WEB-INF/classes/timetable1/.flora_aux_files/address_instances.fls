@@ -1,0 +1,8 @@
+flora_symbol('Address',0,\@,17,4,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol('Cyprus',0,\@,35,7,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol(country,0,\@,32,7,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol('Famagusta',0,\@,29,6,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol(city,0,\@,26,6,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol('Salamis way',0,\@,23,5,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol(street,0,\@,20,5,function_symbol,nontransactional_symbol,'address_instances.flr').
+flora_symbol(emu_address,0,\@,14,4,function_symbol,nontransactional_symbol,'address_instances.flr').

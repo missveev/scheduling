@@ -1,0 +1,82 @@
+/*
+
+request_418_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe418,
+                      year -> 2014,
+                      maxStudentSize -> 40,
+                      semester -> spring].
+
+
+request_318_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe318,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+
+request_318_2: CourseOpeningRequest 
+                     [groupNumber -> 2,
+                      ofCourse -> cmpe318,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+
+request_354_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe354,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_324_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe324,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_344_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe344,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_344_2: CourseOpeningRequest 
+                     [groupNumber -> 2,
+                      ofCourse -> cmpe344,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_112_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe112,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_224_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe224,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_226_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe226,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+
+request_242_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> cmpe242,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> spring].
+*/

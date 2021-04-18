@@ -1,0 +1,11 @@
+#include "flrheader.flh"
+#define FLORA_COMPILATION_ID 3
+
+
+FLORA_THIS_WORKSPACE(mvd)(request_hrm101_1,groupNumber,1,__newcontextvar16).
+FLORA_THIS_WORKSPACE(mvd)(request_hrm101_1,ofCourse,hrm101,__newcontextvar17).
+FLORA_THIS_WORKSPACE(mvd)(request_hrm101_1,maxStudentSize,30,__newcontextvar18).
+FLORA_THIS_WORKSPACE(mvd)(request_hrm101_1,year,2020,__newcontextvar19).
+FLORA_THIS_WORKSPACE(mvd)(request_hrm101_1,forProgram,'Undergraduate',__newcontextvar20).
+FLORA_THIS_WORKSPACE(mvd)(request_hrm101_1,semester,'FALL',__newcontextvar21).
+FLORA_THIS_WORKSPACE(isa)(request_hrm101_1,'CourseOpeningRequest',__newcontextvar22).

@@ -1,0 +1,12 @@
+#include "flrheader.flh"
+#include "flr_fld_standardtypes.flh"
+
+#define FLORA_COMPILATION_ID 3
+
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'CourseOpeningRequest',__fldnewvar2).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,semester,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,forProgram,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,year,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,maxStudentSize,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,ofCourse,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,groupNumber,__fldnewvar2,__fldnewvar3).

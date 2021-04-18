@@ -1,0 +1,17 @@
+flora_symbol('CMPE36',0,\@,265,11,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE127',0,\@,41,3,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol(capacity,0,\@,36,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE128',0,\@,69,4,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('Classroom',0,\@,15,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE129',0,\@,97,5,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE126',0,\@,13,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol(roomNumber,0,\@,19,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('Computer Engineering',0,\@,33,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE25',0,\@,125,6,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol(location,0,\@,24,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol(inDepartment,0,\@,30,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE26',0,\@,153,7,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('ENGINEERING',0,\@,27,2,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE27',0,\@,181,8,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE28',0,\@,209,9,function_symbol,nontransactional_symbol,'classroom_instances.flr').
+flora_symbol('CMPE33',0,\@,237,10,function_symbol,nontransactional_symbol,'classroom_instances.flr').

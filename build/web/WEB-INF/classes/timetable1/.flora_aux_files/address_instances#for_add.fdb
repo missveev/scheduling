@@ -1,0 +1,8 @@
+#include "flrheader.flh"
+#define FLORA_COMPILATION_ID 4
+
+
+FLORA_THIS_WORKSPACE(mvd)(emu_address,street,'Salamis way',__newcontextvar10).
+FLORA_THIS_WORKSPACE(mvd)(emu_address,city,'Famagusta',__newcontextvar11).
+FLORA_THIS_WORKSPACE(mvd)(emu_address,country,'Cyprus',__newcontextvar12).
+FLORA_THIS_WORKSPACE(isa)(emu_address,'Address',__newcontextvar13).

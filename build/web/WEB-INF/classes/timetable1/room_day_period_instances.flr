@@ -1,0 +1,21 @@
+// daha sonra bunlari otomatik olarak uret
+// ayri bir is
+// assigning rooms and period to course-openings
+// separate module
+
+// Room Day Period instances
+/*cmpe127_monday_1_2: RoomDayPeriodDuration 
+                      [room -> cmpe127,
+                       day -> monday,
+                       period -> 1,
+                       duration -> 2].
+
+
+// Room Day Period instances
+cmpe128_tuesday_1_2: RoomDayPeriodDuration 
+                      [room -> cmpe128,
+                       day -> monday,
+                       period -> 1,
+                       duration -> 2].
+
+*/

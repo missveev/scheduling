@@ -1,0 +1,178 @@
+// ['D://Flora//minimize_clashes.flr'].
+
+// check that there are minimum clashes...
+
+
+//mode(debug2).
+
+%r3:- [ +'D://Flora//transcript'],
+    [ +'D://Flora//registration'],
+    [ +'D://Flora//registration_request_instances'],
+    [ +'D://Flora//student_instances'],
+    [ +'D://Flora//transcript_instances'],
+    [ +'D://Flora//generate_meeting_times8b'],
+    [ +'D://Flora//syllabus_instances'],
+    [ +'D://Flora//classroom_instances'],
+    [ +'D://Flora//Concepts'],
+    [ +'D://Flora//address_instances'],
+    [ +'D://Flora//course_instances'],
+   // [ +'D://Flora//course_opening_instances'>>m1],
+    [ +'D://Flora//room_day_period_instances'],
+    [ +'D://Flora//instances'],
+    [ +'D://Flora//CourseCodes'],
+    [ +'D://Flora//utilities'],
+    [ +'D://Flora//course_opening_requests'],
+    [ +'D://Flora//demet_transcript_instances'],
+    [ +'D://Flora//regular_transcript_instances'],
+    [ +'D://Flora//constraints'],
+    [ +'D://Flora//empty'>>m1],
+    [ +'D://Flora//empty'>>m2],
+    [ +'D://Flora//empty'>>m3].
+
+
+// ?RegistrationResult = [(SE,Course),.... ]
+/*
+
+%run_optimized(?Student, ?Year, ?Semester, ?CO_list):-       
+       %run_registration(?Student, ?Year, ?Semester, ?RegistrationResult),
+
+       %courses_assigned_to_student(?RegistrationResult, ?Course_list),
+       \if (mode(debug2)) \then ( writeln(?Course_list)@\prolog),
+
+      %find_course_opening_from_course_list(?Course_list, ?MaxClashes),
+
+*/
+/*
+
+%find_course_opening_from_course_list(?CourseList):- ?CourseList = [].
+%find_course_opening_from_course_list([?ACourse|?Courses]):- ?CO[ofCourse->?ACourse]:CourseOpening@m1,
+                                                             t_insert{(courseSelected(?CO))}@m3,
+                                                             %find_course_opening_form_course_list(?Courses).
+
+*/
+
+////////////////////////////////
+
+%how_many_clashes_all(?Student, ?Year, ?Semester, ?CO_list_all_sorted):-
+        ?CO_list_all = setof { ?P |                             
+                                        %how_many_clashes(?Student, ?Year, ?Semester, ?Course_CO_pair_list, ?HM),
+                                        ?P = (?Course_CO_pair_list, ?HM)
+
+                              },
+        %isort(?CO_list_all, ?CO_list_all_sorted),
+        \if (mode(debug2)) \then ( writeln (sorted - ?CO_list_all_sorted)@\prolog),
+        %showCOsList(?CO_list_all_sorted).
+
+
+
+
+
+//////////////////////////////   
+
+
+
+%how_many_clashes(?Student, ?Year, ?Semester, ?Course_CO_pair_list, ?HM):-
+
+               %courseOpeningsForStudent(?Student,?Year, ?Semester, ?Course_CO_pair_list),
+
+               \if (mode(debug2)) \then ( writeln([courseOpeningsForStudent,?Student,?Year, ?Semester, ?Course_CO_pair_list])@\prolog),
+
+               // %showCOs( ?Course_CO_pair_list),
+               t_deleteall{CO_assigned_to_student(?Student,?Year, ?Semester, ?_CO)@m3},   
+  
+               \if (mode(debug2)) \then ( writeln([called, t_deleteall,?Student,?Year, ?Semester, ?_CO])@\prolog), 
+      
+               %insertCourseOpeningsForStudent(?Student,?Year, ?Semester,?Course_CO_pair_list),
+
+                \if (mode(debug2)) \then ( writeln([called , insertCourseOpeningsForStudent, ?Student, ?Year, ?Semester, ?Course_CO_pair_list])@\prolog),
+               ?HM0 = sum { ?HMClashes |
+                                     CO_assigned_to_student(?Student,?Year, ?Semester, ?CO1)@m3,
+                                     CO_assigned_to_student(?Student,?Year, ?Semester, ?CO2)@m3,
+                                     \+ (?CO1 = ?CO2),
+                                     %howManyClashesTwoCO(?CO1, ?CO2, ?HMClashes)
+                          },
+             \if (mode(debug2)) \then ( writeln( '?HM0' - ?HM0 )@\prolog),
+              ?HM \is ?HM0/2.                               
+
+////////////////////////////
+
+%howManyClashesTwoCO(?CO1, ?CO2, ?HM):-
+
+           \if (mode(debug2)) \then ( writeln([Enter, howManyClashesTwoCO,?CO1, ?CO2, ?HM])@\prolog),
+           ?HM = sum { ?Z | ?CO1:CourseOpening@m1,
+                            ?CO1[teachingTimes -> ?RDPD1]@m1,            
+                            ?RDPD1:RoomDayPeriodDuration@m1,                
+                            ?RDPD1[day -> ?Day1, period -> ?Period1]@m1,
+
+                            ?CO2:CourseOpening@m1,
+                            ?CO2[teachingTimes -> ?RDPD2]@m1,    
+                            ?RDPD2:RoomDayPeriodDuration@m1,                        
+                            ?RDPD2[day -> ?Day2, period -> ?Period2]@m1,
+
+                            ?Day1 = ?Day2,
+                            ?Period1 = ?Period2,
+
+                            ?Z=1},
+            \if (mode(debug2)) \then ( writeln([Exit, howManyClashesTwoCO,?CO1, ?CO2, ?HM])@\prolog).
+
+
+//////////////////////////////////
+
+
+/*
+%course_assigned_to_student(?Student,?Year, ?Semester,?Course):- 
+                                        ?RR:RegistrationResult@m2,
+                                        ?RR[student -> ?Student,
+                                            year -> ?Year,
+                                            semester -> ?Semester,
+                                            courseOpening -> ?CO]@m2,
+                                       ?CO[ofCourse->?Course]@m1.
+
+*/
+
+
+/////////////////////////////////////
+
+/*                  
+%courses_assigned_to_student(?RegistrationResult, ?Course_list):-
+                  ?Course_list = setof { ?Course | %member3( (?_SE, ?Course) , ?RegistrationResult )}.
+
+*/
+
+%courses_assigned_to_student(?Student,?Year, ?Semester,?Course_list):-
+       ?Course_list = setof{  ?Course |
+                                        ?RR:RegistrationResult@m2,
+                                        ?RR[student -> ?Student,
+                                            year -> ?Year,
+                                            semester -> ?Semester,
+                                            courseOpening -> ?CO]@m2,
+                                       ?CO[ofCourse->?Course]@m1
+                           }.
+
+
+////////////////////////////////
+
+%courseOpeningsForStudent(?Student, ?Year, ?Semester, ?CO_list):-
+                      %courses_assigned_to_student(?Student,?Year, ?Semester,?Course_list),
+                      %courseOpeningsForStudent0(?Year, ?Semester,?Course_list, ?CO_list).
+
+                          
+%courseOpeningsForStudent0(?_Year, ?_Semester, ?Course_list,          ?Course_CO_pair_list):- ?Course_list =[], ?Course_CO_pair_list=[].
+%courseOpeningsForStudent0(?Year,  ?Semester, [?Course|?Course_list], ?Course_CO_pair_list):-
+                              ?CO[ofCourse -> ?Course, year->?Year, semester->?Semester]@m1,
+                              ?Course_CO_pair_list = [(?Course,?CO) | ?Rest_CO_List],
+                              %courseOpeningsForStudent0(?Year, ?Semester, ?Course_list, ?Rest_CO_List).
+
+
+                      
+////////////////////////////////////////
+
+%insertCourseOpeningsForStudent(?_Student,?_Year, ?_Semester, ?Course_CO_pair_list):-  ?Course_CO_pair_list = [].
+%insertCourseOpeningsForStudent(?Student,?Year, ?Semester, [?Course_CO_pair|?Course_CO_pair_list]):- 
+                                       ?Course_CO_pair = (?_Course, ?CO),
+                                       t_insert{ CO_assigned_to_student(?Student,?Year, ?Semester, ?CO) }@m3,
+                                       %insertCourseOpeningsForStudent(?Student,?Year, ?Semester, ?Course_CO_pair_list).
+
+
+
+                                              

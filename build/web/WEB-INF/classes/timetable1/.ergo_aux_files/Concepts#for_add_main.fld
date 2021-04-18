@@ -1,0 +1,615 @@
+/************************************************************************
+  file: includes/flrheader.flh
+
+  Author(s): Guizhen Yang
+	     Michael Kifer
+
+  Copyright (C) by
+       The Research Foundation of the State University of New York, 1999-2013.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+  This file is automatically included by the FLORA-2 compiler.
+************************************************************************/
+
+
+/************************************************************************
+  Note: This file should contain Macros only!
+
+  If FLORA_DUMP is defined: preprocessing for user-friendly output.
+
+  If any of these macros are changed, the corresponding wrappers in
+  flrwrapper.P must also be changed
+************************************************************************/
+
+
+
+
+/* File:      flora_prefix.flh -- FLORA-2 prefixes
+**
+** Author(s): Michael Kifer
+**	      Guizhen Yang
+**
+** Contact:   flora-users@lists.sourceforge.net
+**
+** Copyright (C) by
+**      The Research Foundation of the State University of New York, 1999-2018;
+**      and Vulcan, Inc., 2008-2013.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**      http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+**
+**
+*/
+
+
+/******************************************************************************
+  Flora prefix
+
+  All Flora symbols begin with this prefix.
+******************************************************************************/
+/* Prefix for F-logic and HiLog predicates */
+
+
+
+/* File:      ergoisms/flrproduct.P  -- the Ergo hook for all kinds of
+**                                   product-related things
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2013-2018.
+** All rights reserved.
+**
+**
+*/
+
+
+/* MUST BE THE FIRST STATEMENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Attaching FLORA_PREFIX
+
+  The argument to this Macro should be quoted.
+******************************************************************************/
+
+
+
+
+/******************************************************************************
+  Strings following FLORA_PREFIX
+
+  These strings should be quoted.
+******************************************************************************/
+/* Keep "mod" in the name of a formula wrapper right after FLORA_PREFIX
+   We rely on this to identify meta wrappers */
+
+
+
+/*  Trie for keeping skeletons of defined facts -- debugging */
+
+
+/*  Trie for storing used symbols names */
+
+
+
+
+/******************************************************************************
+  Module and trie prefixes
+******************************************************************************/
+/* prefix to construct Flora module predicates. */
+
+
+/*  prefix to name Flora storage trie for a module. */
+
+
+
+/* prefix to name Flora fld storage trie for a module. */
+
+
+/* prefix to name Flora fls storage trie for a module. */
+
+
+
+/****************************************************************************
+  F-logic atom prefixes for predicates that are used to distinguish F-logic
+  wrappers in the trailers, the user program, base facts, etc.
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes of F-logic wrappers
+******************************************************************************/
+
+
+
+/****************************************************************************
+  Prefixes that are used for F-logic wrappers in rule bodies of user programs.
+  They are called "debuggin prefixes" because they were introduced to help
+  implement the debugging feature that catches undefined methods.
+  Note:
+     naf^, dyna^, dynz^ are the outermost prefixes
+     neg^ is the next outermost
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/* Prefixes used for checking undefinedness */
+
+
+
+/* Corresponding 1-arg macros */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* these are used in inheritance closure axioms *******/
+
+
+
+
+
+
+
+
+
+/******* these are for transactions in LIBMOD *******/
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes that are used in the wrappers to the left of module name
+
+  Note: We need to remember that these prefixes are enclosed in quotes.
+        But we need the actual atom length that Prolog uses. So, we deduct 2.
+******************************************************************************/
+
+
+
+/* length of FLORA_PREFIX'FLORA_MODULE_TAG */
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% support for undefinedness checks
+
+
+%% used for generating new oids statically
+%% We had previously #1'FLORA_COMPILATION_ID', but this caused gpp error in
+%% \dump(file). Apparently a gpp bug. So changed to X'FLORA_COMPILATION_ID'
+
+
+
+
+
+
+
+
+
+
+
+
+/* File:      ergoisms/ergo_structdb.flh -- include file for rule structure DB
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2016.
+** All rights reserved.
+**
+*/
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************
+  file: includes/flr_fld_standardtypes.flh
+
+  Author(s): Michael Kifer
+
+  Copyright (C) by
+       The Research Foundation of the State University of New York, 1999-2018.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+  This file is automatically included by the FLORA-2 compiler in every FLD file.
+  This file is for comands that are to be executed once per module.
+
+  Makes the builtin classes \integer, \decimal, etc., defined
+************************************************************************/
+
+/* File:      flora_datatype_symbols.flh -- FLORA-2 datatype names
+**
+** Author(s): Michael Kifer
+**
+** Contact:   flora-users@lists.sourceforge.net
+**
+** Copyright (C) by
+**      The Research Foundation of the State University of New York, 1999-2018.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**      http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+**
+**
+*/
+
+
+
+/* Data types */
+
+
+
+
+
+
+
+
+
+
+
+
+/* \real is synonymized with \double */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* constants used for parsing */
+
+
+
+/* Constant used in the parsed result */
+
+
+
+/* these prefixes are added to atoms that are supposed to represent the
+   data types \string, \iri, etc. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\object',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\long',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\integer',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\short',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\decimal',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\double',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\real',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\float',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\symbol',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\string',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\dateTime' ,__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\date' ,__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\duration' ,__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\time' ,__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\iri' ,__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\boolean',__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\list' ,__newvar2).
+'_$_$_ergo''mod''main''sub'(__newvar1,'\\charlist',__newvar2).
+
+
+
+
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmseUniversityElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'LabRoomDayPeriodDuration',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'RestricredElectiveScienceSyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'BlgmEthicsCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'Course',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'SyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'TurkishProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'EthicsCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'BlgmUniversityElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'RoomDayPeriodDuration',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'AcademicProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmpeEthicsCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'RestricredElectiveFinanceSyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'GraduateProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'TurkishUndergraduateProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'EnglishUndergraduateProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'Grade',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'AreaElectiveSyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'BlgmFinanceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'EnglishProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmpeScienceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CourseType',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'BlgmScienceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'ScienceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmpeFinanceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'EthicsElectiveSyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'UndergraduateProgram',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'TurkishCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmseScienceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmseEthicsCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmseAreaElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'UniversityElectiveSyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmseFinanceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'HistoryCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'Student',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'TurkishOrHistorySyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'RealGrade',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'BlgmAreaElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'TurkishOrHistoryCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'FinanceCourse',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmpeAreaElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'CmpeUniversityElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'LectureRoomDayPeriodDuration',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'PassingGrade',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'Instructor',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'Person',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'AreaElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'UniversityElective',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'NormalSyllabusEntry',__fldnewvar2).
+'_$_$_ergo''mod''main''sub'(__fldnewvar1,'FailingGrade',__fldnewvar2).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,flapply(computed_numeric_contribution,'\\integer'),__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,flapply(computed_credit_counted,'\\integer'),__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,teachingTimes,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,registrationStatus,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,syllabusEntry,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,actualCourse,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,howManyGroups,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,courseOpening,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,courseTaken,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,roomNumber,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,letterGrade,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,location,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,inDepartment,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,id,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,credit_counted,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,semesterData,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,academicProgram,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,refCode,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,street,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,name,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,student,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,nationality,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,city,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,realAcademicTerm,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,gender,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,country,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,how_many_courses_remaining,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,currentSize,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,date_of_birth,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,lastName,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,syllabus,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,address,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,programName,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,how_many_credited_courses_remaining,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,programID,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,ofCourse,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,lecture_hours,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,grade,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,yearEnrolled,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,transcriptEntry,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,belongsTo,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,inProgram,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,gpa,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,year,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,courseCode,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,cgpa,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,courseName,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,numeric_contribution,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,semester,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,hasPrerequisite,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,instructionLanguage,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,maxStudentSize,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,lab_hours,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,whichYear,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,universityName,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,locatedAt,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,credits,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,status,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,deptName,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,forProgram,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,ects,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,referenceCode,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,inFaculty,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,course,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,actualAcademicTerm,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,courseType,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,facultyName,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,room,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,semesterEnrolled,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,atUniversity,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,whichSemester,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,cumulative_contribution,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,day,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,capacity,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,currentAcademicSemester,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,period,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,cumulative_credits,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,duration,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,mostRecentRealAcademicSemester,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,works_in,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,groupNo,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,single_reg,__fldnewvar2,__fldnewvar3).
+'_$_$_ergo''mod''main''imvdsig'(__fldnewvar1,turkishOrForeign,__fldnewvar2,__fldnewvar3).

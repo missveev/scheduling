@@ -1,0 +1,14 @@
+#include "flrheader.flh"
+#define FLORA_COMPILATION_ID 2
+
+
+FLORA_THIS_WORKSPACE(mvd)(civil222,roomNumber,civil222,__newcontextvar12).
+FLORA_THIS_WORKSPACE(mvd)(civil222,location,'Electrical & Electronic Engineering',__newcontextvar13).
+FLORA_THIS_WORKSPACE(mvd)(civil222,inDepartment,'Civil Engineering',__newcontextvar14).
+FLORA_THIS_WORKSPACE(mvd)(civil222,capacity,60,__newcontextvar15).
+FLORA_THIS_WORKSPACE(isa)(civil222,'Classroom',__newcontextvar16).
+FLORA_THIS_WORKSPACE(mvd)(civil243,roomNumber,civil243,__newcontextvar12).
+FLORA_THIS_WORKSPACE(mvd)(civil243,location,'Electrical & Electronic Engineering',__newcontextvar13).
+FLORA_THIS_WORKSPACE(mvd)(civil243,inDepartment,'Civil Engineering',__newcontextvar14).
+FLORA_THIS_WORKSPACE(mvd)(civil243,capacity,60,__newcontextvar15).
+FLORA_THIS_WORKSPACE(isa)(civil243,'Classroom',__newcontextvar16).

@@ -1,0 +1,13 @@
+#include "flrheader.flh"
+#define FLORA_COMPILATION_ID 2
+
+
+FLORA_THIS_WORKSPACE(mvd)(hrm101,courseCode,hrm101,__newcontextvar20).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,courseName,'introduction to human resource',__newcontextvar21).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,hasPrerequisite,none,__newcontextvar22).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,instructionLanguage,'English',__newcontextvar23).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,credits,3,__newcontextvar24).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,lecture_hours,3,__newcontextvar25).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,lab_hours,2,__newcontextvar26).
+FLORA_THIS_WORKSPACE(mvd)(hrm101,ects,4,__newcontextvar27).
+FLORA_THIS_WORKSPACE(isa)(hrm101,'Course',__newcontextvar28).

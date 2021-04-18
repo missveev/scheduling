@@ -1,0 +1,135 @@
+
+
+/*
+request_blgm101_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm101,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm108_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm108,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm108_2: CourseOpeningRequest 
+                     [groupNumber -> 2,
+                      ofCourse -> blgm108,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm108_3: CourseOpeningRequest 
+                     [groupNumber -> 3,
+                      ofCourse -> blgm108,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm112_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm112,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm112_2: CourseOpeningRequest 
+                     [groupNumber -> 2,
+                      ofCourse -> blgm112,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm211_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm211,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm223_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm223,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm223_2: CourseOpeningRequest 
+                     [groupNumber -> 2,
+                      ofCourse -> blgm223,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+*/
+/*
+
+request_blgm231_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm231,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm321_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm321,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm323_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm323,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm343_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm343,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm371_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm371,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm418_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm418,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+*/
+
+/*
+request_blgm424_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm424,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm461_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm461,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+
+request_blgm471_1: CourseOpeningRequest 
+                     [groupNumber -> 1,
+                      ofCourse -> blgm471,
+                      maxStudentSize -> 40,
+                      year -> 2014,
+                      semester -> fall].
+*/

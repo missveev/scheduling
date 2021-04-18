@@ -1,0 +1,240 @@
+/////////////////////////////////////////  Turkish program
+/*
+
+blgmUndegradauteSyllabus: Syllabus [
+     forProgram -> cmpeUndergraduate,
+     syllabusEntries -> { 
+
+                            // BLGM COURSES
+
+                             SE_2B711[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"2B711",
+                             course->blgm101]:SyllabusEntry,
+
+                             SE_2B712[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"2B712",
+                             course->mate163]:SyllabusEntry,
+
+                             SE_2B713[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"2B713",
+                             course->engl171]:SyllabusEntry,
+                          
+                             SE_2B714[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"2B714",
+                             course->mate151]:SyllabusEntry,
+
+                             SE_2B715[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"2B715",
+                             course->fizk103]:SyllabusEntry,
+
+                             SE_2B721[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"2B721",
+                             course->blgm100]:SyllabusEntry,
+
+                             SE_2B722[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"2B722",
+                             course->blgm112]:SyllabusEntry,
+
+                             SE_2B723[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"2B723",
+                             course->engl172]:SyllabusEntry,
+
+
+                             SE_2B724[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"2B724",
+                             course->mate152]:SyllabusEntry,
+
+                             SE_2B725[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"2B725",
+                             course->fizk104]:SyllabusEntry,
+
+                             SE_2B726[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"2B726",
+                             course->hist280]:SyllabusEntry,
+
+                             SE_2B731[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"2B731",
+                             course->blgm223]:SyllabusEntry,
+
+                             SE_2B732[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"2B732",
+                             course->blgm231]:SyllabusEntry,
+
+                             SE_2B733[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"2B733",
+                             course->blgm211]:SyllabusEntry,
+
+                             SE_2B734[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"2B734",
+                             course->engl201]:SyllabusEntry,
+
+                             SE_2B735[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"2B735",
+                             course->mate241]:SyllabusEntry,
+
+                             SE_2B741[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"2B741",
+                             course->blgm224]:SyllabusEntry,
+
+                             SE_2B742[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"2B742",
+                             course->blgm226]:SyllabusEntry,
+
+                             SE_2B743[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"2B743",
+                             course->blgm242]:SyllabusEntry,
+
+                             SE_2B744[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"2B744",
+                             course->mate373]:SyllabusEntry,
+
+                             SE_2B745[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"2B745",
+                             course->biol124]:SyllabusEntry,
+
+                             SE_2B751[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"2B751",
+                             course->blgm323]:SyllabusEntry,
+
+                             SE_2B752[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"2B752",
+                             course->blgm343]:SyllabusEntry,
+
+                             SE_2B753[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"2B753",
+                             course->blgm371]:SyllabusEntry,
+
+                             SE_2B754[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"2B754",
+                             course->blgm321]:SyllabusEntry,
+
+                             SE_2B755[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"2B755",
+                             course->mate322]:SyllabusEntry,
+
+                             SE_2B761[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"2B761",
+                             course->blgm324]:SyllabusEntry,
+
+                             SE_2B762[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"2B762",
+                             course->blgm344]:SyllabusEntry,
+
+                             SE_2B763[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"2B763",
+                             course->blgm354]:SyllabusEntry,
+
+                             SE_2B764[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"2B764",
+                             course->blgm318]:SyllabusEntry,
+
+                             SE_2B765[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"2B765"]:SyllabusEntry,
+
+                             SE_2B771[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B771",
+                             course->blgm400]:SyllabusEntry,
+
+                             SE_2B772[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B772"]:SyllabusEntry,
+
+                             SE_2B773[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B773"]:SyllabusEntry,
+
+                             SE_2B774[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B774"]:SyllabusEntry,
+
+                             SE_2B775[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B775",
+                             course->blgm471]:SyllabusEntry,
+
+                             SE_2B776[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B776",
+                             course->blgm405]:SyllabusEntry,
+
+                             SE_2B777[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"2B777",
+                             course->etik355]:SyllabusEntry,
+
+                             SE_2B781[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"2B781"]:SyllabusEntry,
+
+                             SE_2B782[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"2B782"]:SyllabusEntry,
+
+                             SE_2B783[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"2B783"]:SyllabusEntry,
+
+                             SE_2B784[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"2B784"]:SyllabusEntry,
+
+
+                             SE_2B785[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"2B785",
+                             course->blgm406]:SyllabusEntry
+
+                         }
+
+].
+
+
+// Area electives
+
+SE_2B772[course -> ?C]:- ?C:AreaElective.
+SE_2B773[course -> ?C]:- ?C:AreaElective.
+SE_2B774[course -> ?C]:- ?C:AreaElective.
+SE_2B781[course -> ?C]:- ?C:AreaElective.
+SE_2B782[course -> ?C]:- ?C:AreaElective.
+
+// Restricted electives
+
+SE_2B745[course->?C]:- ?C:ScienceCourse.
+
+SE_2B784[course->?C]:- ?C:FinanceCourse.
+
+// University electives
+SE_2B765[course -> ?C]:- ?C:UniversityElective.
+SE_2B783[course -> ?C]:- ?C:UniversityElective.

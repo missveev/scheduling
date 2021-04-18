@@ -1,0 +1,302 @@
+r_syllabus:- [ +'D://Flora//Concepts'],
+             [ +'D://Flora//course_instances'],
+             [ +'D://Flora//instances'],
+             [ +'D://Flora//utilities'].
+
+
+cmpeUndergraduateSyllabus: Syllabus [
+     forProgram -> cmpeUndergraduateProgram,
+     syllabusEntry -> { SE_25711[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"25711",
+                             course->cmpe101,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                           SE_25712[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"25712",
+                             course->math163,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                            SE_25713[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"25713",
+                             course->engl191,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+                          
+                            SE_25714[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"25714",
+                             course->math151,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25715[whichYear->freshman,
+                             whichSemester->fall,
+                             referenceCode->"25715",
+                             course->phys101,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                            SE_25721[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"25721",
+                             course->cmpe100,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                            SE_25722[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"25722",
+                             course->cmpe112,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                            SE_25723[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"25723",
+                             course->engl192,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+
+                            SE_25724[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"25724",
+                             course->math152,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                            SE_25725[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"25725",
+                             course->phys102,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                            SE_25726[whichYear->freshman,
+                             whichSemester->spring,
+                             referenceCode->"25726",
+                             course->{tusl181,hist280},
+                             courseType-> TurkishOrHistoryCourse]:TurkishOrHistorySyllabusEntry,
+
+                             SE_25731[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"25731",
+                             course->cmpe223,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25732[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"25732",
+                             course->cmpe231,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25733[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"25733",
+                             course->cmpe211,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25734[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"25734",
+                             course->engl201,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25735[whichYear->sophomore,
+                             whichSemester->fall,
+                             referenceCode->"25735",
+                             course->math241,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25741[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"25741",
+                             course->cmpe224,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25742[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"25742",
+                             course->cmpe226,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25743[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"25743",
+                             course->cmpe242,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25744[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"25744",
+                             course->math373,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25745[whichYear->sophomore,
+                             whichSemester->spring,
+                             referenceCode->"25745",
+                             courseType-> CmpeScienceCourse]:RestrictedElectiveScienceSyllabusEntry,
+
+                             SE_25751[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"25751",
+                             course->cmpe323,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25752[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"25752",
+                             course->cmpe343,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25753[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"25753",
+                             course->cmpe371,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25754[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"25754",
+                             course->cmpe321,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25755[whichYear->junior,
+                             whichSemester->fall,
+                             referenceCode->"25755",
+                             course->math322,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25761[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"25761",
+                             course->cmpe324,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25762[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"25762",
+                             course->cmpe344,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25763[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"25763",
+                             course->cmpe354,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25764[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"25764",
+                             course->cmpe318,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25765[whichYear->junior,
+                             whichSemester->spring,
+                             referenceCode->"25765",
+                             courseType-> CmpeUniversityElective]:UniversityElectiveSyllabusEntry,
+
+                             SE_25771[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25771",
+                             course->cmpe400,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25772[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25772",
+                             courseType-> CmpeAreaElective]:AreaElectiveSyllabusEntry,
+
+                             SE_25773[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25773",
+                             courseType-> CmpeAreaElective]:AreaElectiveSyllabusEntry,
+
+                             SE_25774[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25774",
+                             courseType-> CmpeAreaElective]:AreaElectiveSyllabusEntry,
+
+                             SE_25775[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25775",
+                             course->cmpe471,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25776[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25776",
+                             course->cmpe405,
+                             courseType-> NormalCourse]:NormalSyllabusEntry,
+
+                             SE_25777[whichYear->senior,
+                             whichSemester->fall,
+                             referenceCode->"25777",
+                             courseType->CmpeEthicsCourse]:EthicsElectiveSyllabusEntry,
+
+                             SE_25781[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"25781",
+                             courseType-> CmpeAreaElective]:AreaElectiveSyllabusEntry,
+
+                             SE_25782[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"25782",
+                             courseType-> CmpeAreaElective]:AreaElectiveSyllabusEntry,
+
+                             SE_25783[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"25783",
+                             courseType-> CmpeUniversityElective]:UniversityElectiveSyllabusEntry,
+
+                             SE_25784[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"25784",
+                             courseType-> CmpeFinanceCourse]:RestrictedElectiveFinanceSyllabusEntry,
+
+
+                             SE_25785[whichYear->senior,
+                             whichSemester->spring,
+                             referenceCode->"25785",
+                             course->cmpe406,
+                             courseType-> NormalCourse]:NormalSyllabusEntry
+
+                         }
+
+].
+
+
+// Area electives
+/*
+SE_25772: AreaElectiveSyllabusEntry.
+SE_25773: AreaElectiveSyllabusEntry.
+SE_25774: AreaElectiveSyllabusEntry.
+SE_25781: AreaElectiveSyllabusEntry.
+SE_25782: AreaElectiveSyllabusEntry.
+*/
+
+
+SE_25772[course -> ?C]:- ?C:CmpeAreaElective.
+SE_25773[course -> ?C]:- ?C:CmpeAreaElective.
+SE_25774[course -> ?C]:- ?C:CmpeAreaElective.
+SE_25781[course -> ?C]:- ?C:CmpeAreaElective.
+SE_25782[course -> ?C]:- ?C:CmpeAreaElective.
+
+// Restricted electives
+SE_25745: RestricredElectiveScienceSyllabusEntry.
+SE_25745[course->?C]:- ?C:CmpeScienceCourse.
+
+
+SE_25784: RestricredElectiveFinanceSyllabusEntry.
+SE_25784[course->?C]:- ?C:CmpeFinanceCourse.
+
+// University electives
+SE_25765: UniversityElectiveSyllabusEntry.
+SE_25765[course -> ?C]:- ?C:CmpeUniversityElective.
+
+SE_25783: UniversityElectiveSyllabusEntry.
+SE_25783[course -> ?C]:- ?C:CmpeUniversityElective.
+
+// Ethics electives
+
+SE_25777: EthicsElectiveSyllabusEntry.
+SE_25777[course -> ?C]:- ?C:CmpeEthicsCourse. 
+
+// Turkish or History
+SE_25726: TurkishOrHistorySyllabusEntry.
+// SE_25726[course -> ?C] :- ?C=hist280 ; ?C=tusl181. (syllabusta zaten var)

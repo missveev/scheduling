@@ -1,0 +1,204 @@
+
+ //  [ +'D://Flora//generate_meeting_times3'].
+// std110812[date_of_birth->?Y],?Y[month->?M]@\basetype.
+
+load_instances:- [ +'D://Flora//classroom_instances'],
+    [ +'D://Flora//address_instances'],
+    [ +'D://Flora//course_instances'],
+    [ +'D://Flora//room_day_period_instances'],
+    [ +'D://Flora//instances'],
+    [ +'D://Flora//course_opening_instances'],
+    [ +'D://Flora//CourseCodes'],
+    [ +'D://Flora//course_opening_requests'],
+    [ +'D://Flora//syllabus_instances'].
+
+//// 
+
+pp_COs :-
+   ?_x = setof{ ?Y | ?Y = 1,
+                     ?CO[year->?Year,
+                         groupNo->?GroupNo,
+                         ofCourse->?OfCourse,
+                         semester->?Semester]:CourseOpening@m1,
+                      pp_CO(?CO, ?Year, ?GroupNo, ?OfCourse, ?Semester)
+              }.
+
+pp_CO(?CO, ?Year, ?GroupNo, ?OfCourse, ?Semester):- 
+   writeln('\#:CourseOpening[')@\prolog,
+   write('     groupNo ->' )@\prolog, write(?GroupNo)@\prolog, writeln(',')@\prolog,
+   write('     ofCourse -> ')@\prolog, write(?OfCourse)@\prolog, writeln(',')@\prolog,
+   write('     year -> ')@\prolog, write(?Year)@\prolog, writeln(',')@\prolog,
+   write('     semester -> ' )@\prolog, write(?Semester)@\prolog, writeln(',')@\prolog,     
+   ?_X = setof{ ?Y | ?Y = 1,           
+                     ?CO[teachingTimes->?TT]@m1,                    
+                     ?TT[room->?Room, day->?Day, period->?Period, duration->?Duration]@m1,
+                     write('     teachingTimes ->' )@\prolog,  writeln('\#[')@\prolog,
+                                           write('              room -> ')@\prolog, write(?Room)@\prolog, write(',')@\prolog, nl@\prolog,
+                                           write('              day -> ')@\prolog, write(?Day)@\prolog, write(',')@\prolog, nl@\prolog,
+                                           write('              period -> ')@\prolog, write(?Period)@\prolog, write(',')@\prolog, nl@\prolog,
+                                           write('              duration -> ')@\prolog, write(?Duration)@\prolog, writeln('],')@\prolog, 
+                                           nl@\prolog,
+                     nl@\prolog },
+                 writeln('].')@\prolog. 
+
+
+
+
+/////
+
+member2(?X,[?Y|?_A]):-?X=?Y.
+member2(?X,[?_H|?R]):-member2(?X,?R).
+
+%member3(?X,[?Y|?_A]):-?X=?Y.
+%member3(?X,[?_H|?R]):-%member3(?X,?R).
+
+
+member5(?X,[(?_,?Y, ?_2, ?_3, ?_4)|?_A]):-?X=?Y,!.
+member5(?X,[(?_,?_1, ?Y, ?_3, ?_4)|?_A]):-?X=?Y,!.
+member5(?X,[(?_,?_1, ?_2, ?Y, ?_4)|?_A]):-?X=?Y,!.
+member5(?X,[(?_,?_1, ?_2, ?_3, ?Y)|?_A]):-?X=?Y,!.
+
+member5(?X,[?_H|?R]):-member5(?X,?R).
+
+%printlist([]):- nl@\prolog.
+%printlist([?H|?T]):- writeln(?H)@\prolog, %printlist(?T). 
+
+
+app([],?L,?L2):-?L2=?L.
+app([?H1|?T],?L,[?H2|?T2]):- ?H1=?H2 , app(?T,?L,?T2).
+
+
+
+%appX([],?L,?L2):-?L2=?L.
+%appX([?H1|?T],?L,[?H2|?T2]):- ?H1=?H2 , %appX(?T,?L,?T2).
+
+%setSubtract(?L1, [],?L2):-  ?L2=?L1, !.
+%setSubtract(?L1, [?H|?T], ?Result):- ?L1[delete(?H)-> ?Temp]@\btp, 
+                                      %setSubtract(?Temp, ?T, ?Result).
+
+////////////////////////////
+
+%semester_is_before(?Year1, ?_Semester1,  ?Year2, ?_Semester2):-   ?Year1 < ?Year2, !.
+
+%semester_is_before(?Year1, ?Semester1,  ?Year2, ?Semester2):-  ?Year1 = ?Year2, 
+                                                                ?Semester1=spring, 
+                                                                ( ?Semester2 = summer ; ?Semester2 = fall),
+                                                                !.
+
+
+%semester_is_before(?Year1, ?Semester1,  ?Year2, ?Semester2):-  ?Year1 = ?Year2, 
+                                                                ?Semester1=summer, 
+                                                                ?Semester2 = fall.                                                             
+
+
+///////////////////////////////////////
+// (?Y1,?S1) - (?Y2,?S2) = R
+
+%year_semester_subtract(?Y1,?S1,?Y2,?S2, ?R):- ?Y1=?Y2, ?S1=?S2, ?R=0, !.
+
+%year_semester_subtract(?Y1,?S1,?Y2,?S2, ?R):- %semester_is_before(?Y2,?S2,?Y1,?S1),
+                                               %get_sem_before(?Y1,?S1, ?PrevYear, ?PrevSem),
+                                               %year_semester_subtract(?PrevYear,?PrevSem, ?Y2, ?S2, ?Temp),
+                                               ?R \is ?Temp + 1.
+
+%get_sem_before(?Y1,?S1, ?PrevYear, ?PrevSem):- ?S1=fall, 
+                                                !,
+                                                ?PrevSem = spring,
+                                                ?PrevYear = ?Y1.
+
+%get_sem_before(?Y1,?S1, ?PrevYear, ?PrevSem):- ?S1=spring, 
+                                                !,
+                                                ?PrevSem = fall,
+                                                ?PrevYear \is ?Y1-1.
+
+/////////////////////////////////////
+
+// list of  pair  (course-course_opening)
+
+%showCOs(?Course_CO_pair_list):- ?Course_CO_pair_list = [], writeln(' ')@\prolog.
+
+%showCOs(?Course_CO_pair_list):-        
+                        ?Course_CO_pair_list = [?CourseCOPair|?CourseCOPair_list],
+                         // writeln(X1)@\prolog,
+                          ?CourseCOPair = (?Course, ?CO),
+                         // writeln(X2)@\prolog,
+                           ?CO:CourseOpening@m1, 
+                        // writeln(X3)@\prolog,                         
+                          ?TeachingTimes = setof {?TT | ?CO[ teachingTimes -> ?TT]@m1},
+                        //  writeln(X4)@\prolog,
+                          write(?Course - ' ')@\prolog,
+                           %showTeachingTimes(?TeachingTimes),
+                          writeln(' ')@\prolog, 
+                          %showCOs(?CourseCOPair_list).
+
+
+//////////////////////////////////
+
+
+/*
+[   (  [  (cmpe400  ','  _$_$_flora'dyn_newoid54558), 
+          (cmpe405  ','  _$_$_flora'dyn_newoid54559),
+          (cmpe418  ','  _$_$_flora'dyn_newoid54519),
+          (cmpe466  ','  _$_$_flora'dyn_newoid54561),
+          (cmpe471  ','  _$_$_flora'dyn_newoid54571),
+          (cmse321  ','  _$_$_flora'dyn_newoid54581),
+          (ieng355  ','  _$_$_flora'dyn_newoid54606) ]  ',' 2.0000),
+
+     (  [ (cmpe400  ','  _$_$_flora'dyn_newoid54558),
+           (cmpe405  ','  _$_$_flora'dyn_newoid54559),
+           (cmpe418  ','  _$_$_flora'dyn_newoid54519),
+           (cmpe466  ','  _$_$_flora'dyn_newoid54566),
+           (cmpe471  ','  _$_$_flora'dyn_newoid54571),(cmse321  ','_$_$_flora'dyn_newoid54581),
+           (ieng355  ','  _$_$_flora'dyn_newoid54606)]  ','  4.0000)
+
+]
+
+*/
+
+%showCOsList(?X):- ?X=[], nl@\prolog.
+
+
+
+
+
+%showCOsList([?First|?Rest]):- 
+                                           ?First = (?Course_CO_pair_list , ?HM_Clashes),
+                                            %showCOs(?Course_CO_pair_list),
+                                            writeln([with,?HM_Clashes, clashes])@\prolog,
+                                            writeln('**********************************')@\prolog,
+                                            %showCOsList(?Rest).
+
+
+%showTeachingTimes(?TT_list):- ?TT_list = [],  writeln(' ==== ')@\prolog.
+%showTeachingTimes([?TT|?TT_list]):- ?TT: RoomDayPeriodDuration@m1,
+                                     ?TT[day -> ?Day, period -> ?Period]@m1,
+                                     write(?Day - ?Period - ' ')@\prolog,
+                                     %showTeachingTimes(?TT_list).
+
+%showAllCOs(?COs):- ?COs = setof {?X | ?CO:CourseOpening@m1, ?CO[ofCourse->?Course]@m1, ?X= (?Course, ?CO)}, %showCOs(?COs).
+
+
+///////////////////////////////
+
+%isort([],?R):- ?R=[], !.
+
+%isort([?H|?T], ?Result):- %isort(?T,?Temp),
+                           %insert(?H, ?Temp, ?Result).
+
+%insert(?X,[],?R):- ?R = [?X], !.
+
+%insert(?X,[?H|?T],?R):- %is_smaller_or_equal(?X,?H),
+                         !,
+                         ?R = [?X, ?H | ?T].
+
+%insert(?X,[?H|?T],?R):- %insert(?X, ?T, ?Temp),
+                         ?R = [ ?H | ?Temp].
+
+%is_smaller_or_equal(?F,?S):- ?F=(?_CO_LIST1, ?HM1), 
+                              ?S=(?_CO_LIST2, ?HM2), 
+                              ?HM1 =< ?HM2.
+
+
+
+
+

@@ -1,0 +1,55 @@
+biol105:Course [  courseCode->'biol105', courseName->'BiologicalBasisofBehavior', hasPrerequisite->biotin, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+biol124:Course [  courseCode->'biol124', courseName->'IntroductiontoMolecularBiology&Genetics', hasPrerequisite->None, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+biol316:Course [  courseCode->'biol316', courseName->'EnvironmentalManagement', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+chem101:Course [  courseCode->'chem101', courseName->'GeneralChemistry', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+cmpe100:Course [  courseCode->'cmpe100', courseName->'IntroductiontoComputerEngineering', hasPrerequisite->none, instructionLanguage->english, credits->2,   lecture_hours->2, lab_hours->0, ects->2 ].
+cmpe101:Course [  courseCode->'cmpe101', courseName->'FoundationsofComputerEngineering', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+cmpe108:Course [  courseCode->'cmpe108', courseName->'AlgorithmsandProgramming', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+cmpe110:Course [  courseCode->'cmpe110', courseName->'FundamentalsofProgramming', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+cmpe112:Course [  courseCode->'cmpe112', courseName->'ProgrammingFundamentals', hasPrerequisite->cmpe101, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe211:Course [  courseCode->'cmpe211', courseName->'Object-OrientedProgramming', hasPrerequisite->cmpe112, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe223:Course [  courseCode->'cmpe223', courseName->'DigitalLogicDesign', hasPrerequisite->math163, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe224:Course [  courseCode->'cmpe224', courseName->'DigitalLogicSystem', hasPrerequisite->cmpe223, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe226:Course [  courseCode->'cmpe226', courseName->'ElectronicsforComputerEngineers', hasPrerequisite->math241, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe231:Course [  courseCode->'cmpe231', courseName->'DataStructures', hasPrerequisite->cmpe112, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe242:Course [  courseCode->'cmpe242', courseName->'OperatingSystems', hasPrerequisite->cmpe112, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe318:Course [  courseCode->'cmpe318', courseName->'PrinciplesofProgrammingLanguages', hasPrerequisite->cmpe211, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe321:Course [  courseCode->'cmpe321', courseName->'BasicsofSignalsandSystems', hasPrerequisite->cmpe226, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe323:Course [  courseCode->'cmpe323', courseName->'Microprocessors', hasPrerequisite->cmpe224, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe324:Course [  courseCode->'cmpe324', courseName->'ComputerArchitectureandOrganization', hasPrerequisite->cmpe224, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe343:Course [  courseCode->'cmpe343', courseName->'SystemsProgramming', hasPrerequisite->cmpe242, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe344:Course [  courseCode->'cmpe344', courseName->'ComputerNetworks', hasPrerequisite->cmpe343, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe354:Course [  courseCode->'cmpe354', courseName->'DatabaseManagementSystems', hasPrerequisite->cmpe231, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe371:Course [  courseCode->'cmpe371', courseName->'AnalysisofAlgorithms', hasPrerequisite->cmpe231, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+cmpe400:Course [  courseCode->'cmpe400', courseName->'SummerTraining', hasPrerequisite->none, instructionLanguage->english, credits->1,   lecture_hours->2, lab_hours->0, ects->1 ].
+cmpe405:Course [  courseCode->'cmpe405', courseName->'GraduationProjectI', hasPrerequisite->none, instructionLanguage->english, credits->1,   lecture_hours->2, lab_hours->0, ects->3 ].
+cmpe411:Course [  courseCode->'cmpe411', courseName->'InformationSecurity', hasPrerequisite->cmpe354, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe415:Course [  courseCode->'cmpe415', courseName->'VisualProgramming', hasPrerequisite->cmpe354, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe416:Course [  courseCode->'cmpe416', courseName->'Object-OrientedProgramming&GraphicalUserInterfaces', hasPrerequisite->cmpe354, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe418:Course [  courseCode->'cmpe418', courseName->'InternetProgramming', hasPrerequisite->cmpe354, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe423:Course [  courseCode->'cmpe423', courseName->'EmbeddedSystems', hasPrerequisite->cmpe354, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe466:Course [  courseCode->'cmpe466', courseName->'ComputerGraphics', hasPrerequisite->cmpe354, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe471:Course [  courseCode->'cmpe471', courseName->'AutomataTheory', hasPrerequisite->math163, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+cmpe528:Course [  courseCode->'cmpe528', courseName->'computational principle of robotics', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->4,   lecture_hours->3, lab_hours->3, ects->5 ].
+cmpe532:Course [  courseCode->'cmpe532', courseName->'Constraint Programming', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->2, ects->4 ].
+cmpe538:Course [  courseCode->'cmpe538', courseName->'evolutionary multiobjective optimization', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->2, ects->4 ].
+cmpe539:Course [  courseCode->'cmpe539', courseName->'Multiagent system', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->3, ects->5 ].
+cmpe553:Course [  courseCode->'cmpe553', courseName->'Cryptography', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->2, ects->4 ].
+cmpe558:Course [  courseCode->'cmpe558', courseName->'Data Mining', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->3, ects->4 ].
+cmpe562:Course [  courseCode->'cmpe562', courseName->'Pattern Recognition', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->3, ects->4 ].
+cmpe576:Course [  courseCode->'cmpe576', courseName->'Simulation', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->2, ects->4 ].
+cmpe583:Course [  courseCode->'cmpe583', courseName->'Web Semantics', hasPrerequisite->none, instructionLanguage->ENGLISH, credits->3,   lecture_hours->3, lab_hours->3, ects->4 ].
+engl191:Course [  courseCode->'engl191', courseName->'CommunicationinEnglishI', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->4 ].
+engl192:Course [  courseCode->'engl192', courseName->'CommunicationinEnglishII', hasPrerequisite->engl191, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->4 ].
+engl201:Course [  courseCode->'engl201', courseName->'Communicationskills', hasPrerequisite->engl192, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->4 ].
+ghost101:Course [  courseCode->'ghost101', courseName->'ghost101 course', hasPrerequisite->none, instructionLanguage->English, credits->4,   lecture_hours->4, lab_hours->2, ects->2 ].
+hist280:Course [  courseCode->'hist280', courseName->'HistoryofTurkishReforms', hasPrerequisite->none, instructionLanguage->turkish, credits->2,   lecture_hours->2, lab_hours->0, ects->3 ].
+math151:Course [  courseCode->'math151', courseName->'CalculusI', hasPrerequisite->none, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+math152:Course [  courseCode->'math152', courseName->'CalculusII', hasPrerequisite->math151, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+math163:Course [  courseCode->'math163', courseName->'DiscreteMathematics', hasPrerequisite->none, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->5 ].
+math241:Course [  courseCode->'math241', courseName->'LinearAlgebraandOrdinaryDiff.Equations', hasPrerequisite->math151, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+math322:Course [  courseCode->'math322', courseName->'ProbabilityandStatisticalMethods', hasPrerequisite->math151, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->5 ].
+math373:Course [  courseCode->'math373', courseName->'NumericalAnalysisforEngineers', hasPrerequisite->math241, instructionLanguage->english, credits->3,   lecture_hours->3, lab_hours->1, ects->6 ].
+phys101:Course [  courseCode->'phys101', courseName->'PhysicsI', hasPrerequisite->none, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->7 ].
+phys102:Course [  courseCode->'phys102', courseName->'PhysicsII', hasPrerequisite->phys101, instructionLanguage->english, credits->4,   lecture_hours->4, lab_hours->1, ects->6 ].
+tusl181:Course [  courseCode->'tusl181', courseName->'Turkishasasecondlanguage', hasPrerequisite->none, instructionLanguage->english, credits->2,   lecture_hours->2, lab_hours->0, ects->3 ].

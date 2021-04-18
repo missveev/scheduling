@@ -1,0 +1,173 @@
+// Grade instances
+A:Grade.
+A_MINUS:Grade.
+B_PLUS:Grade.
+B:Grade.
+B_MINUS:Grade.
+C_PLUS:Grade.
+C:Grade.
+C_MINUS:Grade.
+D_PLUS:Grade.
+D:Grade.
+D_MINUS:Grade.
+F:Grade.
+W:Grade.
+NG:Grade.
+I:Grade.
+S:Grade.
+U:Grade.
+
+A:RealGrade.
+A_MINUS:RealGrade.
+B_PLUS:RealGrade.
+B:RealGrade.
+B_MINUS:RealGrade.
+C_PLUS:RealGrade.
+C:RealGrade.
+C_MINUS:RealGrade.
+D_PLUS:RealGrade.
+D:RealGrade.
+D_MINUS:RealGrade.
+F:RealGrade.
+NG:RealGrade.
+
+// Riskli....
+//S:RealGrade.
+//U:RealGrade.
+
+F:FailingGrade.
+NG:FailingGrade.
+U:FailingGrade.
+D_MINUS:FailingGrade.
+
+// Passing Grades
+
+A:PassingGrade.
+A_MINUS:PassingGrade.
+B_PLUS:PassingGrade.
+B:PassingGrade.
+B_MINUS:PassingGrade.
+C_PLUS:PassingGrade.
+C:PassingGrade.
+C_MINUS:PassingGrade.
+D_PLUS:PassingGrade.
+D:PassingGrade.
+S:PassingGrade.
+
+// Registration Status
+registered: RegistrationStatus.
+leaveOfAbsence: RegistrationStatus.
+graduated: RegistrationStatus.
+
+// Status
+unsatisfactory: Status.
+onProbation: Status.
+satisfactory: Status.
+dismissed: Status.
+
+//Nationality
+turkish: Nationality.
+turkish_cypriot: Nationality.
+nigerian: Nationality.
+iranian: Nationality.
+
+// TurkishOrForeign
+turkish: TurkishOrForeign.
+foreign: TurkishOrForeign.
+
+
+// Gender
+male: Gender.
+female: Gender.
+
+// Semester
+fall:Semester.
+spring:Semester.
+summer:Semester.
+
+
+// YearType
+freshman:YearType.
+sophomore: YearType.
+junior: YearType.
+senior:YearType.
+
+//Day
+monday:Day.
+tuesday:Day.
+wednesday:Day.
+thursday:Day.
+friday:Day.
+
+//Language
+turkish: Language.
+english: Language.
+
+before(monday,wednesday):-\true.
+before(monday,thursday):-\true.
+before(tuesday,thursday):-\true.
+before(tuesday,friday):-\true.
+before(wednesday,friday):-\true.
+before(wednesday,thursday):-\true.
+before(monday,friday):-\true.
+before(monday,tuesday):-\true.
+before(tuesday,wednesday):-\true.
+before(thursday,friday):-\true.
+
+
+
+// Universities
+emu: University
+       [locatedAt -> emu_address].
+
+
+// Faculties
+engineering_faculty: Faculty 
+        [facultyName -> 'Faculty of Engineering',
+         atUniversity -> emu].
+
+
+// Buildings
+cmpe_building: Building.
+ieng_building: Building.
+
+
+// Departments
+cmpe_department: Department[
+          deptName-> 'Computer Engineering',
+          inFaculty-> engineering_faculty].
+
+//periods
+period(1):-\true.
+period(2):-\true.
+
+period(3):-\true.
+period(4):-\true.
+
+period(5):-\true.
+period(6):-\true.
+period(7):-\true.
+period(8):-\true.
+
+
+
+doublePeriod(1,2):-\true.
+doublePeriod(3,4):-\true.
+doublePeriod(5,6):-\true.
+doublePeriod(7,8):-\true.
+// doublePeriod(2,3):-\true.
+// doublePeriod(4,5):-\true.
+// doublePeriod(6,7):-\true.
+
+//durations
+duration(1).
+duration(2).
+
+cmpeUndergraduateProgram: EnglishUndergraduateProgram.
+blgmUndergraduateProgram: TurkishUndergraduateProgram.
+cmseUndergraduateProgram: EnglishUndergraduateProgram.
+
+cmpeUndergraduateProgram[ programID -> '025', 
+                          belongsTo -> cmpe_department,
+                          syllabus -> cmpeUndergraduateSyllabus 
+                        ].

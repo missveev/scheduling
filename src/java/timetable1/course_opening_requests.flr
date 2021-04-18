@@ -1,0 +1,1 @@
+request_hrm101_1:CourseOpeningRequest [  groupNumber->1, ofCourse->hrm101, maxStudentSize->30, year->2020, forProgram ->Undergraduate , semester->FALL ].

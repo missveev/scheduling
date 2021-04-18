@@ -1,0 +1,829 @@
+/************************************************************************
+  file: includes/flrheader.flh
+
+  Author(s): Guizhen Yang
+	     Michael Kifer
+
+  Copyright (C) by
+       The Research Foundation of the State University of New York, 1999-2013.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+  This file is automatically included by the FLORA-2 compiler.
+************************************************************************/
+
+
+/************************************************************************
+  Note: This file should contain Macros only!
+
+  If FLORA_DUMP is defined: preprocessing for user-friendly output.
+
+  If any of these macros are changed, the corresponding wrappers in
+  flrwrapper.P must also be changed
+************************************************************************/
+
+
+
+
+/* File:      flora_prefix.flh -- FLORA-2 prefixes
+**
+** Author(s): Michael Kifer
+**	      Guizhen Yang
+**
+** Contact:   flora-users@lists.sourceforge.net
+**
+** Copyright (C) by
+**      The Research Foundation of the State University of New York, 1999-2018;
+**      and Vulcan, Inc., 2008-2013.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**      http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+**
+**
+*/
+
+
+/******************************************************************************
+  Flora prefix
+
+  All Flora symbols begin with this prefix.
+******************************************************************************/
+/* Prefix for F-logic and HiLog predicates */
+
+
+
+/* File:      ergoisms/flrproduct.P  -- the Ergo hook for all kinds of
+**                                   product-related things
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2013-2018.
+** All rights reserved.
+**
+**
+*/
+
+
+/* MUST BE THE FIRST STATEMENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Attaching FLORA_PREFIX
+
+  The argument to this Macro should be quoted.
+******************************************************************************/
+
+
+
+
+/******************************************************************************
+  Strings following FLORA_PREFIX
+
+  These strings should be quoted.
+******************************************************************************/
+/* Keep "mod" in the name of a formula wrapper right after FLORA_PREFIX
+   We rely on this to identify meta wrappers */
+
+
+
+/*  Trie for keeping skeletons of defined facts -- debugging */
+
+
+/*  Trie for storing used symbols names */
+
+
+
+
+/******************************************************************************
+  Module and trie prefixes
+******************************************************************************/
+/* prefix to construct Flora module predicates. */
+
+
+/*  prefix to name Flora storage trie for a module. */
+
+
+
+/* prefix to name Flora fld storage trie for a module. */
+
+
+/* prefix to name Flora fls storage trie for a module. */
+
+
+
+/****************************************************************************
+  F-logic atom prefixes for predicates that are used to distinguish F-logic
+  wrappers in the trailers, the user program, base facts, etc.
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes of F-logic wrappers
+******************************************************************************/
+
+
+
+/****************************************************************************
+  Prefixes that are used for F-logic wrappers in rule bodies of user programs.
+  They are called "debuggin prefixes" because they were introduced to help
+  implement the debugging feature that catches undefined methods.
+  Note:
+     naf^, dyna^, dynz^ are the outermost prefixes
+     neg^ is the next outermost
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/* Prefixes used for checking undefinedness */
+
+
+
+/* Corresponding 1-arg macros */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* these are used in inheritance closure axioms *******/
+
+
+
+
+
+
+
+
+
+/******* these are for transactions in LIBMOD *******/
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes that are used in the wrappers to the left of module name
+
+  Note: We need to remember that these prefixes are enclosed in quotes.
+        But we need the actual atom length that Prolog uses. So, we deduct 2.
+******************************************************************************/
+
+
+
+/* length of FLORA_PREFIX'FLORA_MODULE_TAG */
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% support for undefinedness checks
+
+
+%% used for generating new oids statically
+%% We had previously #1'FLORA_COMPILATION_ID', but this caused gpp error in
+%% \dump(file). Apparently a gpp bug. So changed to X'FLORA_COMPILATION_ID'
+
+
+
+
+
+
+
+
+
+
+
+
+/* File:      ergoisms/ergo_structdb.flh -- include file for rule structure DB
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2016.
+** All rights reserved.
+**
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'_$_$_ergo''mod''main''mvd'(biol105,courseCode,biol105,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(biol105,courseName,'BiologicalBasisofBehavior',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(biol105,hasPrerequisite,biotin,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(biol105,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(biol105,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(biol105,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(biol105,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(biol105,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(biol105,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(biol124,courseCode,biol124,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(biol124,courseName,'IntroductiontoMolecularBiology&Genetics',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(biol124,hasPrerequisite,'None',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(biol124,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(biol124,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(biol124,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(biol124,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(biol124,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(biol124,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(biol316,courseCode,biol316,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(biol316,courseName,'EnvironmentalManagement',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(biol316,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(biol316,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(biol316,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(biol316,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(biol316,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(biol316,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(biol316,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(chem101,courseCode,chem101,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(chem101,courseName,'GeneralChemistry',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(chem101,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(chem101,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(chem101,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(chem101,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(chem101,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(chem101,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(chem101,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe100,courseCode,cmpe100,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe100,courseName,'IntroductiontoComputerEngineering',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe100,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe100,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe100,credits,2,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe100,lecture_hours,2,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe100,lab_hours,0,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe100,ects,2,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe100,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe101,courseCode,cmpe101,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe101,courseName,'FoundationsofComputerEngineering',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe101,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe101,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe101,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe101,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe101,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe101,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe101,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe108,courseCode,cmpe108,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe108,courseName,'AlgorithmsandProgramming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe108,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe108,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe108,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe108,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe108,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe108,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe108,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe110,courseCode,cmpe110,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe110,courseName,'FundamentalsofProgramming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe110,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe110,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe110,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe110,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe110,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe110,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe110,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe112,courseCode,cmpe112,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe112,courseName,'ProgrammingFundamentals',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe112,hasPrerequisite,cmpe101,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe112,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe112,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe112,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe112,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe112,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe112,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe211,courseCode,cmpe211,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe211,courseName,'Object-OrientedProgramming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe211,hasPrerequisite,cmpe112,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe211,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe211,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe211,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe211,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe211,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe211,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe223,courseCode,cmpe223,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe223,courseName,'DigitalLogicDesign',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe223,hasPrerequisite,math163,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe223,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe223,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe223,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe223,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe223,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe223,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe224,courseCode,cmpe224,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe224,courseName,'DigitalLogicSystem',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe224,hasPrerequisite,cmpe223,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe224,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe224,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe224,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe224,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe224,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe224,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe226,courseCode,cmpe226,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe226,courseName,'ElectronicsforComputerEngineers',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe226,hasPrerequisite,math241,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe226,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe226,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe226,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe226,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe226,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe226,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe231,courseCode,cmpe231,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe231,courseName,'DataStructures',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe231,hasPrerequisite,cmpe112,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe231,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe231,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe231,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe231,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe231,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe231,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe242,courseCode,cmpe242,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe242,courseName,'OperatingSystems',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe242,hasPrerequisite,cmpe112,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe242,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe242,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe242,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe242,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe242,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe242,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe318,courseCode,cmpe318,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe318,courseName,'PrinciplesofProgrammingLanguages',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe318,hasPrerequisite,cmpe211,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe318,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe318,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe318,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe318,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe318,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe318,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe321,courseCode,cmpe321,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe321,courseName,'BasicsofSignalsandSystems',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe321,hasPrerequisite,cmpe226,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe321,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe321,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe321,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe321,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe321,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe321,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe323,courseCode,cmpe323,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe323,courseName,'Microprocessors',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe323,hasPrerequisite,cmpe224,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe323,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe323,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe323,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe323,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe323,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe323,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe324,courseCode,cmpe324,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe324,courseName,'ComputerArchitectureandOrganization',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe324,hasPrerequisite,cmpe224,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe324,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe324,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe324,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe324,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe324,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe324,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe343,courseCode,cmpe343,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe343,courseName,'SystemsProgramming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe343,hasPrerequisite,cmpe242,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe343,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe343,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe343,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe343,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe343,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe343,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe344,courseCode,cmpe344,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe344,courseName,'ComputerNetworks',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe344,hasPrerequisite,cmpe343,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe344,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe344,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe344,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe344,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe344,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe344,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe354,courseCode,cmpe354,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe354,courseName,'DatabaseManagementSystems',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe354,hasPrerequisite,cmpe231,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe354,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe354,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe354,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe354,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe354,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe354,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe371,courseCode,cmpe371,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe371,courseName,'AnalysisofAlgorithms',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe371,hasPrerequisite,cmpe231,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe371,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe371,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe371,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe371,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe371,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe371,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe400,courseCode,cmpe400,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe400,courseName,'SummerTraining',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe400,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe400,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe400,credits,1,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe400,lecture_hours,2,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe400,lab_hours,0,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe400,ects,1,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe400,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe405,courseCode,cmpe405,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe405,courseName,'GraduationProjectI',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe405,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe405,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe405,credits,1,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe405,lecture_hours,2,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe405,lab_hours,0,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe405,ects,3,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe405,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe411,courseCode,cmpe411,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe411,courseName,'InformationSecurity',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe411,hasPrerequisite,cmpe354,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe411,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe411,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe411,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe411,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe411,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe411,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe415,courseCode,cmpe415,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe415,courseName,'VisualProgramming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe415,hasPrerequisite,cmpe354,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe415,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe415,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe415,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe415,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe415,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe415,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe416,courseCode,cmpe416,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe416,courseName,'Object-OrientedProgramming&GraphicalUserInterfaces',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe416,hasPrerequisite,cmpe354,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe416,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe416,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe416,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe416,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe416,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe416,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe418,courseCode,cmpe418,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe418,courseName,'InternetProgramming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe418,hasPrerequisite,cmpe354,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe418,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe418,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe418,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe418,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe418,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe418,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe423,courseCode,cmpe423,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe423,courseName,'EmbeddedSystems',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe423,hasPrerequisite,cmpe354,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe423,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe423,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe423,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe423,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe423,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe423,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe466,courseCode,cmpe466,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe466,courseName,'ComputerGraphics',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe466,hasPrerequisite,cmpe354,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe466,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe466,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe466,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe466,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe466,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe466,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe471,courseCode,cmpe471,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe471,courseName,'AutomataTheory',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe471,hasPrerequisite,math163,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe471,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe471,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe471,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe471,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe471,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe471,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe528,courseCode,cmpe528,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe528,courseName,'computational principle of robotics',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe528,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe528,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe528,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe528,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe528,lab_hours,3,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe528,ects,5,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe528,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe532,courseCode,cmpe532,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe532,courseName,'Constraint Programming',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe532,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe532,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe532,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe532,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe532,lab_hours,2,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe532,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe532,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe538,courseCode,cmpe538,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe538,courseName,'evolutionary multiobjective optimization',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe538,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe538,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe538,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe538,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe538,lab_hours,2,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe538,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe538,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe539,courseCode,cmpe539,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe539,courseName,'Multiagent system',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe539,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe539,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe539,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe539,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe539,lab_hours,3,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe539,ects,5,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe539,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe553,courseCode,cmpe553,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe553,courseName,'Cryptography',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe553,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe553,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe553,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe553,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe553,lab_hours,2,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe553,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe553,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe558,courseCode,cmpe558,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe558,courseName,'Data Mining',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe558,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe558,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe558,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe558,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe558,lab_hours,3,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe558,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe558,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe562,courseCode,cmpe562,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe562,courseName,'Pattern Recognition',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe562,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe562,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe562,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe562,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe562,lab_hours,3,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe562,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe562,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe576,courseCode,cmpe576,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe576,courseName,'Simulation',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe576,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe576,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe576,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe576,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe576,lab_hours,2,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe576,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe576,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(cmpe583,courseCode,cmpe583,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(cmpe583,courseName,'Web Semantics',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(cmpe583,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(cmpe583,instructionLanguage,'ENGLISH',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(cmpe583,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(cmpe583,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(cmpe583,lab_hours,3,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(cmpe583,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(cmpe583,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(engl191,courseCode,engl191,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(engl191,courseName,'CommunicationinEnglishI',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(engl191,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(engl191,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(engl191,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(engl191,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(engl191,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(engl191,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(engl191,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(engl192,courseCode,engl192,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(engl192,courseName,'CommunicationinEnglishII',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(engl192,hasPrerequisite,engl191,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(engl192,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(engl192,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(engl192,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(engl192,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(engl192,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(engl192,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(engl201,courseCode,engl201,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(engl201,courseName,'Communicationskills',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(engl201,hasPrerequisite,engl192,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(engl201,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(engl201,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(engl201,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(engl201,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(engl201,ects,4,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(engl201,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(ghost101,courseCode,ghost101,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(ghost101,courseName,'ghost101 course',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(ghost101,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(ghost101,instructionLanguage,'English',__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(ghost101,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(ghost101,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(ghost101,lab_hours,2,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(ghost101,ects,2,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(ghost101,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(hist280,courseCode,hist280,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(hist280,courseName,'HistoryofTurkishReforms',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(hist280,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(hist280,instructionLanguage,turkish,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(hist280,credits,2,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(hist280,lecture_hours,2,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(hist280,lab_hours,0,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(hist280,ects,3,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(hist280,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(math151,courseCode,math151,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(math151,courseName,'CalculusI',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(math151,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(math151,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(math151,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(math151,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(math151,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(math151,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(math151,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(math152,courseCode,math152,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(math152,courseName,'CalculusII',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(math152,hasPrerequisite,math151,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(math152,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(math152,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(math152,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(math152,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(math152,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(math152,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(math163,courseCode,math163,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(math163,courseName,'DiscreteMathematics',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(math163,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(math163,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(math163,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(math163,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(math163,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(math163,ects,5,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(math163,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(math241,courseCode,math241,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(math241,courseName,'LinearAlgebraandOrdinaryDiff.Equations',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(math241,hasPrerequisite,math151,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(math241,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(math241,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(math241,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(math241,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(math241,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(math241,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(math322,courseCode,math322,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(math322,courseName,'ProbabilityandStatisticalMethods',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(math322,hasPrerequisite,math151,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(math322,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(math322,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(math322,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(math322,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(math322,ects,5,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(math322,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(math373,courseCode,math373,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(math373,courseName,'NumericalAnalysisforEngineers',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(math373,hasPrerequisite,math241,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(math373,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(math373,credits,3,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(math373,lecture_hours,3,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(math373,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(math373,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(math373,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(phys101,courseCode,phys101,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(phys101,courseName,'PhysicsI',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(phys101,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(phys101,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(phys101,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(phys101,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(phys101,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(phys101,ects,7,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(phys101,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(phys102,courseCode,phys102,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(phys102,courseName,'PhysicsII',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(phys102,hasPrerequisite,phys101,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(phys102,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(phys102,credits,4,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(phys102,lecture_hours,4,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(phys102,lab_hours,1,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(phys102,ects,6,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(phys102,'Course',__newcontextvar28).
+'_$_$_ergo''mod''main''mvd'(tusl181,courseCode,tusl181,__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(tusl181,courseName,'Turkishasasecondlanguage',__newcontextvar21).
+'_$_$_ergo''mod''main''mvd'(tusl181,hasPrerequisite,none,__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(tusl181,instructionLanguage,english,__newcontextvar23).
+'_$_$_ergo''mod''main''mvd'(tusl181,credits,2,__newcontextvar24).
+'_$_$_ergo''mod''main''mvd'(tusl181,lecture_hours,2,__newcontextvar25).
+'_$_$_ergo''mod''main''mvd'(tusl181,lab_hours,0,__newcontextvar26).
+'_$_$_ergo''mod''main''mvd'(tusl181,ects,3,__newcontextvar27).
+'_$_$_ergo''mod''main''isa'(tusl181,'Course',__newcontextvar28).

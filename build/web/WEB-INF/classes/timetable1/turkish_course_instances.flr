@@ -1,0 +1,527 @@
+/////////////////////////////////////BLGM COURSES
+
+blgm100:Course[
+         courseCode->"blgm100",
+         courseName->"Bilgisayar Mühendisligine Giris",
+         hasPrerequisite->none,
+         lecture_hours->2,
+         lab_hours->0,
+         credits->0,
+         instructionLanguage->turkish,
+         ects->2].
+
+blgm101: Course [
+         courseCode->"blgm101",
+         courseName->"Bilgisayar Mühendisligi Temel Ilkeleri",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm108: Course [
+         courseCode->"blgm108",
+         courseName->"Algoritmalar ve Programlama",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm110: Course [
+         courseCode->"blgm110",
+         courseName->"Programlamanin Temelleri",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+
+math163: Course [
+         courseCode->"math163",
+         courseName->"Ayrik Matematik",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->5].
+
+engl171: Course [
+         courseCode->"engl171",
+         courseName->"Ingilizce I",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+
+mate151: Course [
+         courseCode->"mate151",
+         courseName->"Matematik I",
+         hasPrerequisite->none,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+fizk103: Course [
+         courseCode->"fizk103",
+         courseName->"Fizik I",
+         hasPrerequisite->none,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+
+blgm112: Course [
+         courseCode->"blgm112",
+         courseName->"Temel Programlama",
+         hasPrerequisite->blgm101,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+engl172: Course [
+         courseCode->"engl172",
+         courseName->"Ingilizce II",
+         hasPrerequisite->engl171,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+mate152: Course [
+         courseCode->"mate152",
+         courseName->"Matematik II",
+         hasPrerequisite->mate151,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+fizk104: Course [
+         courseCode->"fizk104",
+         courseName->"Fizik II",
+         hasPrerequisite->fizk103,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+
+hist280: Course [        
+         courseCode->"hist280",
+         courseName->"Atatürk Ilkeleri ve Inkilap Tarihi",
+         hasPrerequisite->none,
+         lecture_hours->2,
+         lab_hours->0,
+         credits->2,
+         instructionLanguage->turkish,
+         ects->3].
+
+blgm223: Course [
+         courseCode->"blgm223",
+         courseName->"Sayisal Mantik Tasarimi",
+         hasPrerequisite->mate163,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm231: Course [       
+         courseCode->"blgm231",
+         courseName->"Veri Yapilari",
+         hasPrerequisite->blgm112,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm211: Course [       
+         courseCode->"blgm211",
+         courseName->"Nesneye Dayali Programlama",
+         hasPrerequisite->blgm112,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+engl203: Course [    
+         courseCode->"engl203",
+         courseName->"Mesleki Ingilizce",
+         hasPrerequisite->engl172,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+mate241: Course [       
+         courseCode->"mate241",
+         courseName->"Dogrusal Cebir ve Diferansiyel Denklemler",
+         hasPrerequisite->mate151,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm224: Course [         
+         courseCode->"blgm224",
+         courseName->"Sayisal Mantik Sistemleri",
+         hasPrerequisite->blgm223,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+
+blgm226: Course [        
+         courseCode->"blgm226",
+         courseName->"Bilgisayar Mühendisleri için Elektronik",
+         hasPrerequisite->mate241,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm242: Course [         
+         courseCode->"blgm242",
+         courseName->"Isletim Sistemleri",
+         hasPrerequisite->blgm112,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+mate373: Course [         
+         courseCode->"mate373",
+         courseName->"Mühendisler için Sayisal Çözümleme",
+         hasPrerequisite->mate241,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->6].
+
+biyo121: Course [       
+         courseCode->"biyo121",
+         courseName->"Genel Biyoloji",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->6].
+
+kimy101: Course [
+         courseCode->"kimy101",
+         courseName->"Kimya",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm323: Course [       
+         courseCode->"blgm323",
+         courseName->"Mikroislemciler",
+         hasPrerequisite->blgm224,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm343: Course [
+         courseCode->"blgm343",
+         courseName->"Sistem Programlama",
+         hasPrerequisite->blgm242,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm371: Course [
+         courseCode->"blgm371",
+         courseName->"Algoritmalarin Çözümlenmesi",
+         hasPrerequisite->blgm231,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm321: Course [
+         courseCode->"blgm321",
+         courseName->"Isaret ve Sistemlerin Temelleri",
+         hasPrerequisite->blgm226,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+mate322: Course [
+         courseCode->"mate322",
+         courseName->"Olasilik ve Istatistik",
+         hasPrerequisite->mate151,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->5].
+
+blgm324: Course [
+         courseCode->"blgm324",
+         courseName->"Bilgisayar Mimarisi ve Düzenlemesi",
+         hasPrerequisite->blgm224,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm344: Course [
+         courseCode->"blgm344",
+         courseName->"Bilgisayar Aglari",
+         hasPrerequisite->blgm242,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm354: Course [
+         courseCode->"blgm354",
+         courseName->"Veri Tabani Sistemleri",
+         hasPrerequisite->blgm231,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm318: Course [
+         courseCode->"blgm318",
+         courseName->"Programlama Dillerinin Ilkeleri",
+         hasPrerequisite->blgm211,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm400: Course [
+         courseCode->"blgm400",
+         courseName->"Yaz Staji",
+         hasPrerequisite->none,
+         lecture_hours->0,
+         lab_hours->0,
+         credits->0,
+         instructionLanguage->turkish,
+         ects->1].
+
+blgm418: Course [
+         courseCode->"blgm418",
+         courseName->"Internet Programlama",
+         hasPrerequisite->blgm354,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm415: Course [
+         courseCode->"blgm415",
+         courseName->"Görsel Programlama",
+         hasPrerequisite->blgm354,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm4xx: Course [
+         courseCode->"blgm4xx",
+         courseName->"Bilgi Güvenligi",
+         hasPrerequisite->blgm354,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm416: Course [
+         courseCode->"blgm416",
+         courseName->"Nesneye Dayali Programlama & Grafikel Kullanici Arayüzü",
+         hasPrerequisite->blgm354,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm423: Course [
+         courseCode->"blgm423",
+         courseName->"Gömülü Sistemler",
+         hasPrerequisite->blgm354,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm466: Course [
+         courseCode->"blgm466",
+         courseName->"Bilgisayar Grafikleri",
+         hasPrerequisite->blgm354,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+
+blgm471: Course [
+         courseCode->"blgm471",
+         courseName->"Özdevinirler Teorisi",
+         hasPrerequisite->mate163,
+         lecture_hours->4,
+         lab_hours->1,
+         credits->4,
+         instructionLanguage->turkish,
+         ects->6].
+
+blgm405: Course [
+         courseCode->"blgm405",
+         courseName->"Bitirme Projesi I",
+         hasPrerequisite->none,
+         lecture_hours->1,
+         lab_hours->0,
+         credits->1,
+         instructionLanguage->turkish,
+         ects->3].
+
+ekon111: Course [
+         courseCode->"ekon111",
+         courseName->"Ýktisada Giriþ I",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->0,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+
+
+fztr116: Course [
+         courseCode->"fztr116",
+         courseName->"Sürdürülebilir Saðlýklý Yaþam",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+
+etik355: Course [
+         courseCode->"etik355",
+         courseName->"Mühendislik Etigi",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->0,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+besd121: Course [
+         courseCode->"besd121",
+         courseName->"Saglikli Yasam ve Beslenme",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->0,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+sgbl101: Course [
+         courseCode->"sgbl101",
+         courseName->"Ilk Yardim",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->0,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->4].
+
+
+ieng450: Course [
+         courseCode->"ieng450",
+         courseName->"Management",
+         hasPrerequisite->none,
+         lecture_hours->3,
+         lab_hours->0,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->5].
+
+
+blgm406: Course [
+         courseCode->"blgm406",
+         courseName->"Bitirme Projesi II",
+         hasPrerequisite->blgm405,
+         lecture_hours->3,
+         lab_hours->1,
+         credits->3,
+         instructionLanguage->turkish,
+         ects->7].
+
+blgm466: AreaElective.
+blgm423: AreaElective.
+blgm416: AreaElective.
+blgm4xx: AreaElective.
+blgm415: AreaElective.
+blgm418: AreaElective.
+
+biyo121: ScienceCourse.
+kimy101: ScienceCourse.
+
+ieng450: FinanceCourse.
+ekon111: FinanceCourse.
+
+sgbl101: UniversityElective.
+fztr116: UniversityElective.
+besd121: UniversityElective.

@@ -1,0 +1,33 @@
+//['D://Flora//test2.flr'].
+/*
+true.
+
+
+insertIntoDB([]):-true,!.
+insertIntoDB([?H|?T]):-   true,
+                             !,
+                             newoid{?RDPD}, 
+                             insert{?RDPD[a -> ?H]},
+                             insertIntoDB(?T).  
+
+
+
+d([]):-true,!.
+
+d([?H|?T]):-   true,
+                             !,
+                             newoid{?RDPD}, 
+                             insert{?RDPD[a -> ?H]},
+                             d(?T).
+
+
+*/
+class1 [a=> class2,
+        a=> class3].
+
+b:class2.
+c:class3.
+
+obj1[a->b].
+obj1[a->c].
+

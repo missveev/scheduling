@@ -1,0 +1,106 @@
+/*spring_2014_CMPE_418:CourseOpening 
+             [groupNo -> 1,
+              ofCourse -> cmpe418 ,
+              year -> 2014,
+              semester -> spring,
+              teaching_times -> {cmpe127_monday_1_2,cmpe128_tuesday_1_2 }].
+
+otomatik olarak üretiyoruz
+*/
+
+fall_2014_CMPE_411a:CourseOpening 
+             [groupNo -> 1,
+              ofCourse -> cmpe411 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> thursday, period->3]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> thursday, period->4]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> monday, period->3]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> monday, period->4]:RoomDayPeriodDuration
+
+            ].
+
+
+fall_2014_CMPE_411b:CourseOpening 
+             [groupNo -> 2,
+              ofCourse -> cmpe411 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> tuesday, period->3]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> tuesday, period->4]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> friday, period->5]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> friday, period->6]:RoomDayPeriodDuration
+
+            ].
+
+fall_2014_CMPE_416a:CourseOpening 
+             [groupNo -> 1,
+              ofCourse -> cmpe416 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> thursday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> thursday, period->2]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> monday, period->7]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> monday, period->8]:RoomDayPeriodDuration
+
+            ].
+
+fall_2014_CMPE_416b:CourseOpening 
+             [groupNo -> 2,
+              ofCourse -> cmpe416 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> friday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> friday, period->2]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->2]:RoomDayPeriodDuration
+
+            ].
+
+fall_2014_IENG_450a:CourseOpening 
+             [groupNo -> 1,
+              ofCourse -> ieng450 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> tuesday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> tuesday, period->2]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->5]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->6]:RoomDayPeriodDuration
+
+            ].
+
+fall_2014_IENG_450b:CourseOpening 
+             [groupNo -> 2,
+              ofCourse -> ieng450 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> tuesday, period->3]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> tuesday, period->4]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->3]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->4]:RoomDayPeriodDuration
+
+            ].
+
+fall_2014_SOC_101a:CourseOpening 
+             [groupNo -> 1,
+              ofCourse -> soc101 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> monday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> monday, period->2]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> wednesday, period->2]:RoomDayPeriodDuration
+
+            ].
+
+fall_2014_SOC_101b:CourseOpening 
+             [groupNo -> 2,
+              ofCourse -> soc101 ,
+              year -> 2014,
+              semester -> fall,
+              teachingTimes ->  \#[day-> tuesday, period->3]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> tuesday, period->4]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> friday, period->1]:RoomDayPeriodDuration,
+              teachingTimes ->  \#[day-> friday, period->2]:RoomDayPeriodDuration
+
+            ].

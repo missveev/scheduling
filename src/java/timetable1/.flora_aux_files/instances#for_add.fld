@@ -1,0 +1,33 @@
+#include "flrheader.flh"
+#include "flr_fld_standardtypes.flh"
+
+#define FLORA_COMPILATION_ID 6
+
+FLORA_THIS_WORKSPACE(tblflapply)(duration,__fldnewvar1,__fldnewvar2).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,syllabus,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,belongsTo,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,programID,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,inFaculty,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,deptName,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,atUniversity,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,facultyName,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(mvd)(__fldnewvar1,locatedAt,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'RealGrade',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Gender',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Language',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Faculty',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Department',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Grade',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Building',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Nationality',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Day',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'University',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'TurkishUndergraduateProgram',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'RegistrationStatus',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'YearType',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'EnglishUndergraduateProgram',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'FailingGrade',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'PassingGrade',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Status',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'TurkishOrForeign',__fldnewvar2).
+FLORA_THIS_WORKSPACE(sub)(__fldnewvar1,'Semester',__fldnewvar2).

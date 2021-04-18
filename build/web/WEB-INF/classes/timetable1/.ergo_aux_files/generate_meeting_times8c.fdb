@@ -1,0 +1,7 @@
+#include "flrheader.flh"
+#define FLORA_COMPILATION_ID 1
+
+
+FLORA_THIS_WORKSPACE(tblflapply)(mode,normal,__newcontextvar3).
+FLORA_THIS_WORKSPACE(tblflapply)(true,__newcontextvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(generate_times,[],__newcontextvar3).

@@ -1,0 +1,256 @@
+/* 
+Transcript[|student=>Student,
+            semesterData => TranscriptSemesterData,
+            registrationStatus => RegistrationStatus
+|].
+
+
+TranscriptSemesterData[|
+         whichYear=> \integer,
+         whichSemester=>Semester,        
+         transcriptEntry => TranscriptEntry,// birden cok
+         gpa=> \float,           
+         cgpa=> \float,
+         status => Status,
+         actualAcademicTerm => \integer
+|].
+
+
+TranscriptEntry[|                  
+         syllabusEntry=>SyllabusEntry,
+         letterGrade=>Grade,
+         numeric_contribution => \float,
+         credit_counted => \integer
+|].
+
+
+*/
+
+sibel_transcript: Transcript.
+
+sibel_transcript[student-> std110812,
+                 syllabus -> cmpeUndergraduateSyllabus,
+                 semesterData -> sibel_aa1,
+                 semesterData -> sibel_aa2,
+                 semesterData -> sibel_aa3,
+                 semesterData -> sibel_aa4,
+                 semesterData -> sibel_aa5,
+                 semesterData -> sibel_aa6,
+                 semesterData -> sibel_aa7,
+                 /*semesterData -> sibel_aa8*/
+                 registrationStatus -> registered
+                 ].
+   
+
+sibel_aa1 : TranscriptSemesterData.
+
+
+sibel_aa1[
+        // actualAcademicTerm->1,
+         whichYear->2010,
+         whichSemester->fall,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+
+sibel_aa1 [
+          transcriptEntry-> { \#[syllabusEntry-> SE_25711,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25712,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25713,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25714,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25715,
+                                 letterGrade-> D]:TranscriptEntry
+                            }
+
+
+
+].
+
+sibel_aa2 : TranscriptSemesterData.
+
+sibel_aa2[
+         //actualAcademicTerm->2,
+         whichYear->2011,
+         whichSemester->spring,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa2 [
+          transcriptEntry-> { \#[syllabusEntry-> SE_25721,
+                                 letterGrade-> D]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25722,
+                                 letterGrade-> D]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25723,
+                                 letterGrade-> A]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25724,
+                                 letterGrade-> D]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25725,
+                                 letterGrade-> D]:TranscriptEntry,
+                               \#[syllabusEntry-> SE_25726,
+                                 letterGrade-> C]:TranscriptEntry
+                            }
+].
+
+sibel_aa3 : TranscriptSemesterData.
+
+sibel_aa3[
+         //actualAcademicTerm->3,
+         whichYear->2011,
+         whichSemester->fall,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa3 [
+          transcriptEntry-> {  \#[syllabusEntry-> SE_25731,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25732,
+                                 letterGrade-> D]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25733,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25734,
+                                letterGrade-> D]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25735,
+                                 letterGrade-> C_MINUS]:TranscriptEntry
+                            }
+].
+
+sibel_aa4 : TranscriptSemesterData.
+
+sibel_aa4[
+         //actualAcademicTerm->4,
+         whichYear->2012,
+         whichSemester->spring,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa4 [
+          transcriptEntry-> {  \#[syllabusEntry-> SE_25741,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25742,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25743,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25744,
+                                 letterGrade-> C_MINUS]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25745,
+                                actualCourse->chem101,
+                                 letterGrade-> C]:TranscriptEntry
+                              
+                            }
+].
+
+
+sibel_aa5 : TranscriptSemesterData.
+
+sibel_aa5[
+         //actualAcademicTerm->4,
+         whichYear->2012,
+         whichSemester->spring,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa5 [
+          transcriptEntry-> {  \#[syllabusEntry-> SE_25751,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25752,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25753,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25754,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25755,
+                                 letterGrade-> C_MINUS]:TranscriptEntry
+                            }
+].
+
+
+sibel_aa6 : TranscriptSemesterData.
+
+sibel_aa6[
+         //actualAcademicTerm->4,
+         whichYear->2012,
+         whichSemester->spring,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa6 [
+          transcriptEntry-> {  \#[syllabusEntry-> SE_25761,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25762,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25763,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25764,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25765,
+                                 letterGrade-> C_MINUS]:TranscriptEntry
+                            }
+].
+
+
+
+sibel_aa7 : TranscriptSemesterData.
+
+sibel_aa7[
+         //actualAcademicTerm->4,
+         whichYear->2012,
+         whichSemester->spring,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa7 [
+          transcriptEntry-> {  \#[syllabusEntry-> SE_25771,
+                                 letterGrade-> S]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25772,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25773,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25774,
+                                 letterGrade-> A]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25775,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25776,
+                                 letterGrade-> C_MINUS]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25777,
+                                 letterGrade-> C_MINUS]:TranscriptEntry
+                            }
+].
+
+
+sibel_aa8 : TranscriptSemesterData.
+
+sibel_aa8[
+         //actualAcademicTerm->4,
+         whichYear->2012,
+         whichSemester->spring,
+         registrationStatus -> registered
+        // numeric_contribution-> computed.
+].
+
+sibel_aa8 [
+          transcriptEntry-> {  \#[syllabusEntry-> SE_25781,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25782,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25783,
+                                 letterGrade-> B]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25784,
+                                 letterGrade-> C]:TranscriptEntry,
+                              \#[syllabusEntry-> SE_25785,
+                                 letterGrade-> C_MINUS]:TranscriptEntry
+                             }
+].
+
+
+

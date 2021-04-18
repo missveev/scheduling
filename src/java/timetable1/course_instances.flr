@@ -1,0 +1,1 @@
+hrm101:Course [  courseCode->'hrm101', courseName->'introduction to human resource', hasPrerequisite->none, instructionLanguage->English, credits->3,   lecture_hours->3, lab_hours->2, ects->4 ].

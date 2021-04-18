@@ -1,0 +1,426 @@
+/************************************************************************
+  file: includes/flrheader.flh
+
+  Author(s): Guizhen Yang
+	     Michael Kifer
+
+  Copyright (C) by
+       The Research Foundation of the State University of New York, 1999-2013.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+  This file is automatically included by the FLORA-2 compiler.
+************************************************************************/
+
+
+/************************************************************************
+  Note: This file should contain Macros only!
+
+  If FLORA_DUMP is defined: preprocessing for user-friendly output.
+
+  If any of these macros are changed, the corresponding wrappers in
+  flrwrapper.P must also be changed
+************************************************************************/
+
+
+
+
+/* File:      flora_prefix.flh -- FLORA-2 prefixes
+**
+** Author(s): Michael Kifer
+**	      Guizhen Yang
+**
+** Contact:   flora-users@lists.sourceforge.net
+**
+** Copyright (C) by
+**      The Research Foundation of the State University of New York, 1999-2018;
+**      and Vulcan, Inc., 2008-2013.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**      http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+**
+**
+*/
+
+
+/******************************************************************************
+  Flora prefix
+
+  All Flora symbols begin with this prefix.
+******************************************************************************/
+/* Prefix for F-logic and HiLog predicates */
+
+
+
+/* File:      ergoisms/flrproduct.P  -- the Ergo hook for all kinds of
+**                                   product-related things
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2013-2018.
+** All rights reserved.
+**
+**
+*/
+
+
+/* MUST BE THE FIRST STATEMENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Attaching FLORA_PREFIX
+
+  The argument to this Macro should be quoted.
+******************************************************************************/
+
+
+
+
+/******************************************************************************
+  Strings following FLORA_PREFIX
+
+  These strings should be quoted.
+******************************************************************************/
+/* Keep "mod" in the name of a formula wrapper right after FLORA_PREFIX
+   We rely on this to identify meta wrappers */
+
+
+
+/*  Trie for keeping skeletons of defined facts -- debugging */
+
+
+/*  Trie for storing used symbols names */
+
+
+
+
+/******************************************************************************
+  Module and trie prefixes
+******************************************************************************/
+/* prefix to construct Flora module predicates. */
+
+
+/*  prefix to name Flora storage trie for a module. */
+
+
+
+/* prefix to name Flora fld storage trie for a module. */
+
+
+/* prefix to name Flora fls storage trie for a module. */
+
+
+
+/****************************************************************************
+  F-logic atom prefixes for predicates that are used to distinguish F-logic
+  wrappers in the trailers, the user program, base facts, etc.
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes of F-logic wrappers
+******************************************************************************/
+
+
+
+/****************************************************************************
+  Prefixes that are used for F-logic wrappers in rule bodies of user programs.
+  They are called "debuggin prefixes" because they were introduced to help
+  implement the debugging feature that catches undefined methods.
+  Note:
+     naf^, dyna^, dynz^ are the outermost prefixes
+     neg^ is the next outermost
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/* Prefixes used for checking undefinedness */
+
+
+
+/* Corresponding 1-arg macros */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* these are used in inheritance closure axioms *******/
+
+
+
+
+
+
+
+
+
+/******* these are for transactions in LIBMOD *******/
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes that are used in the wrappers to the left of module name
+
+  Note: We need to remember that these prefixes are enclosed in quotes.
+        But we need the actual atom length that Prolog uses. So, we deduct 2.
+******************************************************************************/
+
+
+
+/* length of FLORA_PREFIX'FLORA_MODULE_TAG */
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% support for undefinedness checks
+
+
+%% used for generating new oids statically
+%% We had previously #1'FLORA_COMPILATION_ID', but this caused gpp error in
+%% \dump(file). Apparently a gpp bug. So changed to X'FLORA_COMPILATION_ID'
+
+
+
+
+
+
+
+
+
+
+
+
+/* File:      ergoisms/ergo_structdb.flh -- include file for rule structure DB
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2016.
+** All rights reserved.
+**
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'_$_$_ergo''mod''main''isa'('A','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('A_MINUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B_PLUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B_MINUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C_PLUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C_MINUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D_PLUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D_MINUS','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('F','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('W','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('NG','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('I','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('S','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('U','Grade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('A','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('A_MINUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B_PLUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B_MINUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C_PLUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C_MINUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D_PLUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D_MINUS','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('F','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('NG','RealGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('F','FailingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('NG','FailingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('U','FailingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D_MINUS','FailingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('A','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('A_MINUS','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B_PLUS','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('B_MINUS','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C_PLUS','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('C_MINUS','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D_PLUS','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('D','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'('S','PassingGrade',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(registered,'RegistrationStatus',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(leaveOfAbsence,'RegistrationStatus',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(graduated,'RegistrationStatus',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(unsatisfactory,'Status',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(onProbation,'Status',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(satisfactory,'Status',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(dismissed,'Status',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(turkish,'Nationality',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(turkish_cypriot,'Nationality',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(nigerian,'Nationality',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(iranian,'Nationality',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(turkish,'TurkishOrForeign',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(foreign,'TurkishOrForeign',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(male,'Gender',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(female,'Gender',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(fall,'Semester',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(spring,'Semester',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(summer,'Semester',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(freshman,'YearType',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(sophomore,'YearType',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(junior,'YearType',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(senior,'YearType',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(monday,'Day',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(tuesday,'Day',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(wednesday,'Day',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(thursday,'Day',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(friday,'Day',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(turkish,'Language',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(english,'Language',__newcontextvar4).
+'_$_$_ergo''mod''main''mvd'(emu,locatedAt,emu_address,__newcontextvar6).
+'_$_$_ergo''mod''main''isa'(emu,'University',__newcontextvar7).
+'_$_$_ergo''mod''main''mvd'(engineering_faculty,facultyName,'Faculty of Engineering',__newcontextvar8).
+'_$_$_ergo''mod''main''mvd'(engineering_faculty,atUniversity,emu,__newcontextvar9).
+'_$_$_ergo''mod''main''isa'(engineering_faculty,'Faculty',__newcontextvar10).
+'_$_$_ergo''mod''main''isa'(cmpe_building,'Building',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(ieng_building,'Building',__newcontextvar4).
+'_$_$_ergo''mod''main''mvd'(cmpe_department,deptName,'Computer Engineering',__newcontextvar8).
+'_$_$_ergo''mod''main''mvd'(cmpe_department,inFaculty,engineering_faculty,__newcontextvar9).
+'_$_$_ergo''mod''main''isa'(cmpe_department,'Department',__newcontextvar10).
+'_$_$_ergo''mod''main''tblflapply'(duration,1,__newcontextvar4).
+'_$_$_ergo''mod''main''tblflapply'(duration,2,__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(cmpeUndergraduateProgram,'EnglishUndergraduateProgram',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(blgmUndergraduateProgram,'TurkishUndergraduateProgram',__newcontextvar4).
+'_$_$_ergo''mod''main''isa'(cmseUndergraduateProgram,'EnglishUndergraduateProgram',__newcontextvar4).
+'_$_$_ergo''mod''main''mvd'(cmpeUndergraduateProgram,programID,'025',__newcontextvar8).
+'_$_$_ergo''mod''main''mvd'(cmpeUndergraduateProgram,belongsTo,cmpe_department,__newcontextvar9).
+'_$_$_ergo''mod''main''mvd'(cmpeUndergraduateProgram,syllabus,cmpeUndergraduateSyllabus,__newcontextvar10).

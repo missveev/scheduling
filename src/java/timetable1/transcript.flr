@@ -1,0 +1,415 @@
+// ['D://Flora//transcript.flr', +'D://Flora//course_instances.flr',+'D://Flora//syllabus_instances.flr',+'D://Flora//transcript_instances.flr',+'D://Flora//instances.flr'].
+
+/* TranscriptSemesterData[
+         whichYear=> \integer,
+         whichSemester=>Semester,        
+         transcriptEntry => TranscriptEntry,// birden cok
+         gpa=> \float,           
+         cgpa=> \float,
+         status => Status,
+         actualAcademicTerm => \integer
+|].
+*/
+
+////////////////////////////////
+
+
+?X[how_many_credited_courses_remaining->?HM]:- ?X:TranscriptSemesterData,
+                                      // ?X[ actualAcademicTerm -> ?AAT],
+                                      ?X[ realAcademicTerm -> ?RAT],
+
+                                      ?Transcript[ semesterData -> ?X],
+                                      ?Transcript[syllabus-> ?Syllabus],
+
+
+                                     // writeln(syllabus- ?Syllabus)@\prolog,
+
+                                      ?ListOfCreditedCoursesAlreadyPassed = 
+                                            setof { ?SE |  ?Transcript[ semesterData ->?TSD],
+                                                           ?TSD[ transcriptEntry -> ?TE],                                                           
+                                                           ?TE[ syllabusEntry -> ?SE,                                                                
+                                                                courseTaken -> ?Course
+                                                               ],                                                           
+                                                           ?Course[credits -> ?Credits],
+                                                           ?Credits>0,                                     
+                                                           %findMostRecentGradeSERealSem(?Transcript, ?RAT,  ?SE, ?LG),                                                                                                                  
+                                                           ?LG: PassingGrade
+                                                   },
+
+                                      //  writeln(passedCourses - ?ListOfCreditedCoursesAlreadyPassed )@\prolog,
+
+                                        
+
+                                      ?ListOfCreditedCoursesInTheSyllabus = 
+                                            setof { ?SE1 | ?Syllabus[ syllabusEntry -> ?SE1],
+                                                            ?SE1[course->?Course1],
+                                                            ?Course1[credits -> ?Credits1],
+                                                            ?Credits1>0 },
+                                      // writeln(syllabusCourses - ?ListOfCreditedCoursesInTheSyllabus )@\prolog,
+
+                                       %setSubtract( ?ListOfCreditedCoursesInTheSyllabus,
+                                                     ?ListOfCreditedCoursesAlreadyPassed,
+                                                     ?ListOfCreditedCoursesRemaining),
+                                        // writeln(remainingCourses - ?ListOfCreditedCoursesRemaining )@\prolog,
+
+                                      ?ListOfCreditedCoursesRemaining[length->?HM]@\btp.
+
+////////////////////////////
+
+
+?X[how_many_courses_remaining->?HM]:- ?X:TranscriptSemesterData,
+                                      // ?X[ actualAcademicTerm -> ?AAT],
+                                      ?X[ realAcademicTerm -> ?RAT],
+
+
+                                      ?Transcript[ semesterData -> ?X],
+                                      ?Transcript[syllabus-> ?Syllabus],
+
+
+                                     // writeln(syllabus- ?Syllabus)@\prolog,
+
+                                      ?ListOfCoursesAlreadyPassed = 
+                                            setof { ?SE |  ?Transcript[ semesterData ->?TSD],
+                                                           ?TSD[ transcriptEntry -> ?TE],
+                                                           
+                                                           ?TE[ syllabusEntry -> ?SE ],                                                                                                                  
+                                                           %findMostRecentGradeSERealSem(?Transcript, ?RAT,  ?SE, ?LG), 
+                                                           ?LG: PassingGrade},                                                  
+
+                                      //  writeln(passedCourses - ?ListOfCoursesAlreadyPassed )@\prolog,
+
+                                        
+
+                                      ?ListOfCoursesInTheSyllabus = 
+                                            setof { ?SE1 | ?Syllabus[ syllabusEntry -> ?SE1]},
+                                      // writeln(syllabusCourses - ?ListOfCoursesInTheSyllabus )@\prolog,
+
+                                       %setSubtract( ?ListOfCoursesInTheSyllabus,
+                                                     ?ListOfCoursesAlreadyPassed,
+                                                     ?ListOfCoursesRemaining),
+                                        // writeln(remainingCourses - ?ListOfCoursesRemaining )@\prolog,
+
+                                      ?ListOfCoursesRemaining[length->?HM]@\btp.
+
+
+///////////////////////////
+                                       
+
+                                                                                                                                                                                                              
+
+?X[status->satisfactory]:- ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?Z],
+                           (?Z=1;Z=2),
+                           !.
+
+
+?X[status->satisfactory]:- ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?Z],
+                           //(?Z=1;?Z=2;?Z=3),
+                           (?Z=3;?Z=4;?Z=5),
+                           ?X[cgpa->?Cgpa],
+                           ?Cgpa>=1.50 ,!.
+
+?X[status->satisfactory]:- ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?Z],
+                           (?Z=6;?Z=7;?Z=8),
+                           ?X[cgpa->?Cgpa],
+                           ?Cgpa>=1.80 ,!.
+
+?X[status->satisfactory]:- ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?AAT],
+                           ?AAT>=9,
+                           ?X[cgpa->?Cgpa],
+                           ?Cgpa>=2.00 ,!.
+///////////////////////////////////////////////////////////////////devammmmm 22.01.2015
+?X[status->onProbation]:-  ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?Z],
+                           (?Z=3;?Z=4;?Z=5),               
+                           ?X[cgpa->?Cgpa],
+                           ?Cgpa<1.50 ,
+                           ?Cgpa>=1.00,!.
+
+?X[status->onProbation]:-  ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?Z],
+                           (?Z=6;?Z=7;?Z=8),
+                           ?X[cgpa->?Cgpa],
+                           ?Cgpa<1.80 ,
+                           ?Cgpa>=1.50,!.
+
+?X[status->onProbation]:-  ?X:TranscriptSemesterData,
+                           ?X[actualAcademicTerm->?AAT],
+                           ?AAT>=9,
+                           ?X[cgpa->?Cgpa],
+                           ?Cgpa<2.00 ,
+                           ?Cgpa>=1.80,!.
+
+?X[status->unsatisfactory]:- ?X:TranscriptSemesterData,
+                             ?X[actualAcademicTerm->?Z],
+                             (?Z=3;?Z=4),               
+                             ?X[cgpa->?Cgpa],
+                             ?Cgpa<1.00, !.
+
+?X[status->dismissed]:- ?X:TranscriptSemesterData,
+                             ?X[actualAcademicTerm->?Z],
+                             ?Z>=5,               
+                             ?X[cgpa->?Cgpa],
+                             ?Cgpa<1.00, !.
+ 
+?X[status->unsatisfactory]:- ?X:TranscriptSemesterData,
+                             ?X[actualAcademicTerm->?Z] , 
+                             (?Z=6;?Z=7;?Z=8),              
+                             ?X[cgpa->?Cgpa],
+                             ?Cgpa<1.50, !.
+
+?X[status->unsatisfactory]:- ?X:TranscriptSemesterData,
+                             ?X[actualAcademicTerm->?AAT],
+                             ?AAT>=9,               
+                             ?X[cgpa->?Cgpa],
+                             ?Cgpa<1.80, !.
+                          
+// mapping between letter grades and numeric grades
+
+// \udf foo(t1,...,tn) := Expr :- Body.
+
+\udf num(A) := 4.
+\udf num(A_MINUS) := 3.7.
+\udf num(B_PLUS) := 3.3.
+\udf num(B) := 3.
+\udf num(B_MINUS) := 2.7.
+\udf num(C_PLUS) := 2.3.
+\udf num(C) := 2.
+\udf num(C_MINUS) := 1.7.
+\udf num(D_PLUS) := 1.3.
+\udf num(D) := 1.
+\udf num(D_MINUS) := 0.7.
+\udf num(F) := 0.
+\udf num(NG) := 0.
+
+///////////////////////////
+// TranscriptEntry 
+///////////////////////////
+
+?X[courseTaken->?Course]:- ?X:TranscriptEntry,
+                ?X[actualCourse->?Course],!.
+
+?X[courseTaken->?Course]:- ?X:TranscriptEntry,
+                           ?X[syllabusEntry->?SE],
+                           ?SE[course->?Course].
+
+// count credit as zero if course taken later on
+// used for cumulative credit computation
+
+?X[computed_credit_counted(?LastRealSemester)->0]:- 
+     ?X:TranscriptEntry,
+     ?X[syllabusEntry->?SE],
+     ?TSD[transcriptEntry->?X],
+     ?TRANSCRIPT[semesterData->?TSD],
+     ?TSD[realAcademicTerm -> ?RATprev],     
+     ?TRANSCRIPT[semesterData->?OtherTSD],          
+     ?OtherTSD[realAcademicTerm -> ?OtherRAT],
+     ?OtherRAT > ?RATprev,
+     ?OtherRAT =< ?LastRealSemester,
+     ?OtherTSD[transcriptEntry -> ?OtherTranscriptEntry],
+     ?OtherTranscriptEntry[syllabusEntry -> ?SE],
+     !.
+
+
+
+?X[computed_credit_counted(?_LastSemester)->?CCC]:- 
+                       ?X:TranscriptEntry,
+                       ?X[credit_counted->?CCC].
+                     
+
+     
+
+?X[credit_counted->?CC]:- ?X:TranscriptEntry,
+                          ?X[letterGrade->?LG],
+                          ?LG:RealGrade,                          
+                          ?X[syllabusEntry->?SE],
+                          ?SE[course->?CRSE],
+                          ?CRSE[credits->?CC].
+
+
+?X[credit_counted->0]:- ?X:TranscriptEntry,
+                         ?X[letterGrade->?LG],
+                         \+ ?LG:RealGrade.
+
+
+
+?X[numeric_contribution->?NGrade]:- 
+                                ?X:TranscriptEntry,
+                                ?X[letterGrade->?LG],
+                                ?LG:RealGrade,      
+                                ?NumericGrade = num(?LG),                                              
+                                ?X[syllabusEntry->?SE],
+                                ?SE[course->?CRSE],
+                                ?CRSE[credits->?CC],
+                                ?NGrade \is ?CC*?NumericGrade. 
+
+
+?X[numeric_contribution->0]:- ?X:TranscriptEntry,
+                         ?X[letterGrade->?LG],
+                         \+ ?LG:RealGrade.
+
+
+
+/////
+
+?X[computed_numeric_contribution(?LastSemester)->?CNC]:- 
+                                ?X:TranscriptEntry,
+                                ?X[letterGrade->?LG],
+                                ?LG:RealGrade,      
+                                ?NumericGrade = num(?LG),    
+                                ?X[computed_credit_counted(?LastSemester)->?CCC],                                          
+                                ?CNC \is ?CCC*?NumericGrade. 
+
+
+?X[computed_numeric_contribution(?_LastSemester)->0]:- 
+                         ?X:TranscriptEntry,
+                         ?X[letterGrade->?LG],
+                         \+ ?LG:RealGrade.
+
+
+
+//////////////////////////////////////////
+/// TranscriptSemesterData
+//////////////////////////////////////////
+
+?X[numeric_contribution->?NCSemester]:- ?X:TranscriptSemesterData,
+                                        ?NCSemester = sum{?Y| ?X[transcriptEntry->?TE], ?TE[numeric_contribution->?Y]}.
+
+//////
+
+?X[computed_numeric_contribution(?LastSemester)->?NCSemester]:- 
+                                        ?X:TranscriptSemesterData,                                       
+                                        ?NCSemester = sum{?Y| ?X[transcriptEntry->?TE], ?TE[computed_numeric_contribution(?LastSemester)->?Y]}.
+
+
+?X[credit_counted->?CCSemester]:- ?X:TranscriptSemesterData,                                 
+                                  ?CCSemester = sum{?Y| ?X[transcriptEntry->?TE], ?TE[credit_counted->?Y]}.
+
+
+?X[computed_credit_counted(?LastSemester)->?CCSemester]:- 
+                                  ?X:TranscriptSemesterData,                                
+                                  ?CCSemester = sum{?Y| ?X[transcriptEntry->?TE], ?TE[computed_credit_counted(?LastSemester)->?Y]}.
+
+
+////
+
+?X[gpa->?GPA]:- ?X:TranscriptSemesterData,
+                ?X[numeric_contribution->?NC],
+                ?X[credit_counted->?CC], 
+                 ?GPA \is ?NC/?CC.
+
+/////
+
+?X[cumulative_credits->?CumC]:- 
+                ?X:TranscriptSemesterData,
+                ?X[actualAcademicTerm ->?AAT],
+                ?AAT=1,
+                !,
+                ?X[credit_counted->?CC],
+                ?CumC = ?CC. 
+
+                         
+
+?X[cumulative_credits->?CumC]:- 
+                ?X:TranscriptSemesterData,
+                ?X[realAcademicTerm ->?RAT],
+                ?Transcript[semesterData->?X],
+                ?RAT>1,
+                ?PrevSemesterCredits = 
+                     sum{?CC| ?Transcript[semesterData->?Y], 
+                                \+ ?X=?Y,
+                              ?Y[realAcademicTerm->?RAT2],
+                              ?RAT2 < ?RAT,
+                              ?Y[computed_credit_counted(?RAT)->?CC]},
+                ?X[credit_counted->?CC2],
+                ?CumC \is ?CC2+?PrevSemesterCredits.
+
+
+///////
+
+?X[cumulative_contribution->?CumC]:- 
+                ?X:TranscriptSemesterData,
+                ?X[actualAcademicTerm ->?AAT],
+                ?AAT=1,
+                !,
+                ?X[numeric_contribution->?CC],
+                ?CumC = ?CC. 
+                         
+
+?X[cumulative_contribution->?CumC]:- 
+                ?X:TranscriptSemesterData,
+                ?X[realAcademicTerm ->?RAT],
+                ?Transcript[semesterData->?X],
+                ?RAT>1,
+                ?PrevSemesterContribution = 
+                     sum{?CC| ?Transcript[semesterData->?Y], 
+                              \+ ?X=?Y,
+                              ?Y[realAcademicTerm->?RAT2],
+                              ?RAT2 < ?RAT,
+                              ?Y[computed_numeric_contribution(?RAT)->?CC]},
+                ?X[numeric_contribution->?CC2],
+                ?CumC \is ?CC2+?PrevSemesterContribution.
+
+
+////////
+
+?X[cgpa->?CGPA]:- 
+                ?X:TranscriptSemesterData,
+                ?X[cumulative_contribution->?CumC],
+                ?X[cumulative_credits->?CC], 
+                ?CGPA \is ?CumC/?CC.
+
+
+
+//////////////////////////////
+
+
+?X[actualAcademicTerm->?AAT]:- 
+                ?X:TranscriptSemesterData,
+                ?X[whichYear-> ?Year, whichSemester -> ?Semester],
+                (?Semester=fall; ?Semester=spring),
+                ?TRANSCRIPT[semesterData->?X],
+                ?AAT0 = count{ ?TSD |
+                                  ?TRANSCRIPT[ semesterData -> ?TSD],
+                                  ?TSD[registrationStatus -> registered],
+                                  ?TSD[whichYear-> ?Year1],
+                                  ?TSD[whichSemester-> ?Semester1],
+                                  (?Semester1 = fall ; ?Semester1 = spring),                                  
+                                  %semester_is_before(?Year1, ?Semester1,  ?Year, ?Semester)                                           
+                             },
+               ?AAT \is ?AAT0 + 1.
+
+ ?X[actualAcademicTerm->?AAT]:- 
+                ?X:TranscriptSemesterData,
+                ?X[whichYear-> ?Year, whichSemester -> ?Semester],
+                ?Semester=summer,
+                ?TRANSCRIPT[semesterData->?X],
+                ?AAT = count{ ?TSD |
+                                  ?TRANSCRIPT[ semesterData -> ?TSD],
+                                  ?TSD[registrationStatus -> registered],
+                                  ?TSD[whichYear-> ?Year1],
+                                  ?TSD[whichSemester-> ?Semester1],
+                                  (?Semester1 = fall ; ?Semester1 = spring),                                  
+                                  %semester_is_before(?Year1, ?Semester1,  ?Year, ?Semester)                                           
+                             }.
+
+
+////////////////////////////////////
+
+// including summer terms
+
+?X[realAcademicTerm->?AAT]:- 
+                ?X:TranscriptSemesterData,
+                ?X[whichYear-> ?Year, whichSemester -> ?Semester],               
+                ?TRANSCRIPT[semesterData->?X],
+                ?AAT0 = count{ ?TSD |
+                                  ?TRANSCRIPT[ semesterData -> ?TSD],
+                                  ?TSD[registrationStatus -> registered],
+                                  ?TSD[whichYear-> ?Year1],
+                                  ?TSD[whichSemester-> ?Semester1],                                                                   
+                                  %semester_is_before(?Year1, ?Semester1,  ?Year, ?Semester)                                           
+                             },
+              ?AAT \is ?AAT0 + 1.

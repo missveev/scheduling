@@ -1,0 +1,6 @@
+
+// Addresses
+emu_address: Address
+        [street-> 'Salamis way',
+        city-> 'Famagusta',
+        country-> 'Cyprus'].

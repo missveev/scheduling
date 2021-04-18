@@ -1,0 +1,20 @@
+#include "flrheader.flh"
+#include "flr_fld_standardtypes.flh"
+
+#define FLORA_COMPILATION_ID 1
+
+FLORA_THIS_WORKSPACE(tblflapply)(true,__fldnewvar1).
+FLORA_THIS_WORKSPACE(tblflapply)(mode,__fldnewvar1,__fldnewvar2).
+FLORA_THIS_WORKSPACE(tblflapply)(requested_courses,__fldnewvar1,__fldnewvar2,__fldnewvar3,__fldnewvar4).
+FLORA_THIS_WORKSPACE(nontblflapply)(generateOneByOne,__fldnewvar1,__fldnewvar2,__fldnewvar3,__fldnewvar4,__fldnewvar5,__fldnewvar6,__fldnewvar7,__fldnewvar8).
+FLORA_THIS_WORKSPACE(nontblflapply)(generate_times,__fldnewvar1,__fldnewvar2).
+FLORA_THIS_WORKSPACE(nontblflapply)(t_single_insert4,__fldnewvar1,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(t_single_insert3,__fldnewvar1,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(t_single_insert0,__fldnewvar1,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(t_single_insert2,__fldnewvar1,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(runFirstSolution,__fldnewvar1,__fldnewvar2,__fldnewvar3,__fldnewvar4).
+FLORA_THIS_WORKSPACE(nontblflapply)(runAllSolutions,__fldnewvar1,__fldnewvar2,__fldnewvar3,__fldnewvar4).
+FLORA_THIS_WORKSPACE(nontblflapply)(t_del,__fldnewvar1,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(del,__fldnewvar1,__fldnewvar2,__fldnewvar3).
+FLORA_THIS_WORKSPACE(nontblflapply)(gen,__fldnewvar1,__fldnewvar2).
+FLORA_THIS_WORKSPACE(nontblflapply)(r,__fldnewvar1).

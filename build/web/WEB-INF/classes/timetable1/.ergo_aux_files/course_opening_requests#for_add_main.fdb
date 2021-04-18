@@ -1,0 +1,551 @@
+/************************************************************************
+  file: includes/flrheader.flh
+
+  Author(s): Guizhen Yang
+	     Michael Kifer
+
+  Copyright (C) by
+       The Research Foundation of the State University of New York, 1999-2013.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+
+  This file is automatically included by the FLORA-2 compiler.
+************************************************************************/
+
+
+/************************************************************************
+  Note: This file should contain Macros only!
+
+  If FLORA_DUMP is defined: preprocessing for user-friendly output.
+
+  If any of these macros are changed, the corresponding wrappers in
+  flrwrapper.P must also be changed
+************************************************************************/
+
+
+
+
+/* File:      flora_prefix.flh -- FLORA-2 prefixes
+**
+** Author(s): Michael Kifer
+**	      Guizhen Yang
+**
+** Contact:   flora-users@lists.sourceforge.net
+**
+** Copyright (C) by
+**      The Research Foundation of the State University of New York, 1999-2018;
+**      and Vulcan, Inc., 2008-2013.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**      http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+**
+**
+*/
+
+
+/******************************************************************************
+  Flora prefix
+
+  All Flora symbols begin with this prefix.
+******************************************************************************/
+/* Prefix for F-logic and HiLog predicates */
+
+
+
+/* File:      ergoisms/flrproduct.P  -- the Ergo hook for all kinds of
+**                                   product-related things
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2013-2018.
+** All rights reserved.
+**
+**
+*/
+
+
+/* MUST BE THE FIRST STATEMENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Attaching FLORA_PREFIX
+
+  The argument to this Macro should be quoted.
+******************************************************************************/
+
+
+
+
+/******************************************************************************
+  Strings following FLORA_PREFIX
+
+  These strings should be quoted.
+******************************************************************************/
+/* Keep "mod" in the name of a formula wrapper right after FLORA_PREFIX
+   We rely on this to identify meta wrappers */
+
+
+
+/*  Trie for keeping skeletons of defined facts -- debugging */
+
+
+/*  Trie for storing used symbols names */
+
+
+
+
+/******************************************************************************
+  Module and trie prefixes
+******************************************************************************/
+/* prefix to construct Flora module predicates. */
+
+
+/*  prefix to name Flora storage trie for a module. */
+
+
+
+/* prefix to name Flora fld storage trie for a module. */
+
+
+/* prefix to name Flora fls storage trie for a module. */
+
+
+
+/****************************************************************************
+  F-logic atom prefixes for predicates that are used to distinguish F-logic
+  wrappers in the trailers, the user program, base facts, etc.
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes of F-logic wrappers
+******************************************************************************/
+
+
+
+/****************************************************************************
+  Prefixes that are used for F-logic wrappers in rule bodies of user programs.
+  They are called "debuggin prefixes" because they were introduced to help
+  implement the debugging feature that catches undefined methods.
+  Note:
+     naf^, dyna^, dynz^ are the outermost prefixes
+     neg^ is the next outermost
+****************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/* Prefixes used for checking undefinedness */
+
+
+
+/* Corresponding 1-arg macros */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* these are used in inheritance closure axioms *******/
+
+
+
+
+
+
+
+
+
+/******* these are for transactions in LIBMOD *******/
+
+
+
+
+
+
+
+/******************************************************************************
+  Lengths of prefixes that are used in the wrappers to the left of module name
+
+  Note: We need to remember that these prefixes are enclosed in quotes.
+        But we need the actual atom length that Prolog uses. So, we deduct 2.
+******************************************************************************/
+
+
+
+/* length of FLORA_PREFIX'FLORA_MODULE_TAG */
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% support for undefinedness checks
+
+
+%% used for generating new oids statically
+%% We had previously #1'FLORA_COMPILATION_ID', but this caused gpp error in
+%% \dump(file). Apparently a gpp bug. So changed to X'FLORA_COMPILATION_ID'
+
+
+
+
+
+
+
+
+
+
+
+
+/* File:      ergoisms/ergo_structdb.flh -- include file for rule structure DB
+**
+** Author(s): Michael Kifer
+**
+** Contact:   michael.kifer@coherentknowledge.com
+**
+** Copyright (C) Coherent Knowledge Systems, LLC, 2016.
+** All rights reserved.
+**
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'_$_$_ergo''mod''main''mvd'(request_cmpe108_2,groupNumber,2,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe108_2,ofCourse,cmpe108,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe108_2,maxStudentSize,30,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe108_2,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe108_2,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe108_2,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe108_2,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_1,ofCourse,cmpe110,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe110_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_2,groupNumber,2,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_2,ofCourse,cmpe110,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_2,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_2,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_2,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_2,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe110_2,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_1,ofCourse,cmpe231,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe231_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_2,groupNumber,2,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_2,ofCourse,cmpe231,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_2,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_2,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_2,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe231_2,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe231_2,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe318_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe318_1,ofCourse,cmpe318,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe318_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe318_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe318_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe318_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe318_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe321_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe321_1,ofCourse,cmpe321,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe321_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe321_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe321_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe321_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe321_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe323_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe323_1,ofCourse,cmpe323,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe323_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe323_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe323_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe323_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe323_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe324_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe324_1,ofCourse,cmpe324,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe324_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe324_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe324_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe324_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe324_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe343_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe343_1,ofCourse,cmpe343,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe343_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe343_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe343_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe343_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe343_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe354_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe354_1,ofCourse,cmpe354,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe354_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe354_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe354_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe354_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe354_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_1,ofCourse,cmpe371,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe371_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_2,groupNumber,2,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_2,ofCourse,cmpe371,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_2,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_2,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_2,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe371_2,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe371_2,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe423_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe423_1,ofCourse,cmpe423,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe423_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe423_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe423_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe423_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe423_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe471_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe471_1,ofCourse,cmpe471,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe471_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe471_1,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe471_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe471_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe471_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_chem101_2,groupNumber,2,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_chem101_2,ofCourse,chem101,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_chem101_2,maxStudentSize,23,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_chem101_2,year,2020,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_chem101_2,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_chem101_2,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_chem101_2,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe583_8,groupNumber,8,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe583_8,ofCourse,cmpe583,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe583_8,maxStudentSize,25,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe583_8,year,2021,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe583_8,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe583_8,semester,'SUMMER',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe583_8,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_8,groupNumber,8,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_8,ofCourse,cmpe110,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_8,maxStudentSize,25,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_8,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_8,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe110_8,semester,'SUMMER',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe110_8,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,groupNumber,4,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,maxStudentSize,25,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,semester,'SUMMER',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_4,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,groupNumber,8,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,ofCourse,cmpe242,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,maxStudentSize,45,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,year,2021,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,semester,'FALL',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe242_8,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,groupNumber,8,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,maxStudentSize,25,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,semester,'SUMMER',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_8,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe223_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe223_1,ofCourse,cmpe223,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe223_1,maxStudentSize,44,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe223_1,year,2020,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe223_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe223_1,semester,'FALL',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe223_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe226_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe226_1,ofCourse,cmpe226,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe226_1,maxStudentSize,33,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe226_1,year,2020,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe226_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe226_1,semester,'FALL',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe226_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_2,groupNumber,2,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_2,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_2,maxStudentSize,30,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_2,year,2020,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_2,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_2,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_2,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,groupNumber,8,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,maxStudentSize,25,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,year,2019,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_8,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_8,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe224_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe224_1,ofCourse,cmpe224,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe224_1,maxStudentSize,33,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe224_1,year,2020,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe224_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe224_1,semester,'FALL',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe224_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,groupNumber,8,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,ofCourse,cmpe242,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,maxStudentSize,50,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,year,2025,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe242_8,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe242_8,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,maxStudentSize,40,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,year,2025,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,groupNumber,4,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,maxStudentSize,30,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,year,2025,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_4,semester,'SPRING',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_4,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,ofCourse,biol105,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,maxStudentSize,45,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,year,2025,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_biol105_1,semester,'FALL',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_biol105_1,'CourseOpeningRequest',__newcontextvar22).
+'_$_$_ergo''mod''main''mvd'(request_cmpe100_1,groupNumber,1,__newcontextvar16).
+'_$_$_ergo''mod''main''mvd'(request_cmpe100_1,ofCourse,cmpe100,__newcontextvar17).
+'_$_$_ergo''mod''main''mvd'(request_cmpe100_1,maxStudentSize,25,__newcontextvar18).
+'_$_$_ergo''mod''main''mvd'(request_cmpe100_1,year,2025,__newcontextvar19).
+'_$_$_ergo''mod''main''mvd'(request_cmpe100_1,forProgram,'Undergraduate',__newcontextvar20).
+'_$_$_ergo''mod''main''mvd'(request_cmpe100_1,semester,'FALL',__newcontextvar21).
+'_$_$_ergo''mod''main''isa'(request_cmpe100_1,'CourseOpeningRequest',__newcontextvar22).

@@ -1,0 +1,108 @@
+//['D://Flora//test.flr'].
+
+
+abc(1,2).
+name(imren, toprak).
+name(hekim, toprak).
+name(sulan,yigithan).
+
+parent(a,b).
+parent(a,c).
+
+kardes(?x,?y):- parent(?z,?x), parent(?z,?y), naf(?x=?y).
+
+/*
+
+concept Person
+     nonFunctionalProperties
+          Creator hasValue "Sengul"
+     endNonFunctionalProperties
+     ID ofType  (0 1) _string
+     gender ofType  (0 1) _string
+     Date_of_Birth ofType  (0 1) _date
+     name ofType  (0 1) _string
+     lastName ofType  (0 1) _string
+     address ofType Address
+
+*/
+// ['D:\\FLORA\\test.flr'].
+
+Person[id => string].
+
+Student::Person[yearEnrolled=>integer].
+
+
+p:Person[id->"abc"].
+s:Student[id->"s1"].
+
+pred(${obj[a->1]}):- ?X=1.
+
+/*
+Elapsed (CPU) time 3.4360 (3.3120) seconds
+
+Yes
+
+flora2 ?- obj[a->?B].
+
+Elapsed (CPU) time 0.0000 (0.0000) seconds
+
+No
+
+flora2 ?- pred(?x).
+
+?x = ${obj[a->1]@main}
+
+1 solution(s) in 0.0000 seconds
+
+Yes
+
+flora2 ?- pred(obj[a->?x]).
+
+++Error[Flora-2]> <Parser> near line(1)/char(9) `['
+                truth-valued path expressions (e.g., pathexp[...]) are not allow
+ed here
+
+++1 error
+
+++compilation aborted
+
+flora2 ?- pred(obj).
+
+Elapsed (CPU) time 0.0000 (0.0000) seconds
+
+No
+
+flora2 ?- pred(${obj}).
+
+Elapsed (CPU) time 0.0000 (0.0000) seconds
+
+No
+
+flora2 ?- pred(${obj[a->?x]}).
+
+?x = 1
+
+1 solution(s) in 0.0000 seconds
+
+Yes
+
+
+*/
+// works!!!!
+e(?x):-o2[a->?x].
+d(?x):- ${o2[a->?x]}.
+o2[a->2].
+
+manyak:- t_insert{b[c->1000]@m1}.
+
+
+
+%testInsert(?x):- t_insert{b[c->33]@m1}, b[c->?x]@m1. //OK
+
+%testInsert2:- t_insert{b[c->44]@m1},b[c->?x]@m1.
+
+%outside(?x):- %testInsert2, b[c->?x]@m1.
+
+
+
+

@@ -1,0 +1,309 @@
+RegistrationRequest[|student => Student,
+                    // course => Course,
+                    year => \integer,
+                    semester => Semester|].
+
+
+SingleRegistrationResult[|student=> Student,
+                           year=> \integer,
+                           semester => Semester,
+                           single_reg=> CourseOpening|].
+
+
+RegistrationResult [|student=> Student,
+                     year=> \integer,
+                     semester => Semester,
+                     syllabusEntry => SyllabusEntry,
+                     courseOpening=> CourseOpening
+|].
+
+Student::Person.
+Student[|  yearEnrolled=>\integer,
+           semesterEnrolled=>Semester,
+           inProgram=>AcademicProgram,
+           currentAcademicSemester => \integer,
+           mostRecentRealAcademicSemester => \integer,           
+           turkishOrForeign => TurkishOrForeign
+|].
+
+
+
+
+?X[ mostRecentRealAcademicSemester ->?MRRAS]:-
+          ?X: Student,
+          ?Transcript[student->?X],
+          ?MRRAS = max {?RAT |
+                                            ?Transcript[semesterData-> ?TSD],
+                                            ?TSD[realAcademicTerm->?RAT],
+                                            ?TSD[registrationStatus->registered]                                                                                                                                                                
+                                    },
+          !.
+
+
+
+?X[ mostRecentRealAcademicSemester ->?MRRAS]:-
+          ?X: Student,
+          ?MRRAS=0.
+
+
+
+
+?X[currentAcademicSemester->?CAS]:-
+          ?X: Student,
+          ?Transcript[student->?X],
+          ?LastActualSemester = max {?AAT |
+                                            ?Transcript[semesterData-> ?TSD],
+                                            ?TSD[actualAcademicTerm->?AAT],
+                                            ?TSD[registrationStatus->registered],
+                                            ?TSD[whichSemester->?Semester],
+                                            (?Semester = spring ; ?Semester = fall)                                                                          
+                                    },
+         ?CAS \is ?LastActualSemester + 1,
+         !.
+
+
+?X[currentAcademicSemester->?CAS]:-
+          ?X: Student,
+          ?CAS=1.
+
+
+?X[turkishOrForeign->turkish]:- ?X: Student,
+                                ( ?X[nationality->turkish] ; ?X[nationality->turkish_cypriot]),
+                                !.
+
+?X[turkishOrForeign->foreign]:- ?X: Student.
+
+
+TurkishOrForeign[].
+
+Day[].
+
+Language[].
+
+// Period[].
+
+Course[|courseCode => string,
+       courseName => string,      
+       hasPrerequisite  => Course,
+       lecture_hours => \integer,
+       lab_hours => \integer,       
+       credits => \integer, 
+       instructionLanguage => Language,
+       ects => \integer |].
+       // belongsToProgram => UndergraduateProgram].
+
+AreaElective :: Course.
+CmpeAreaElective :: AreaElective.
+CmseAreaElective :: AreaElective.
+BlgmAreaElective :: AreaElective.
+
+UniversityElective :: Course.
+CmpeUniversityElective :: UniversityElective.
+CmseUniversityElective :: UniversityElective.
+BlgmUniversityElective :: UniversityElective.
+
+ScienceCourse :: Course.
+CmpeScienceCourse :: ScienceCourse.
+CmseScienceCourse :: ScienceCourse.
+BlgmScienceCourse :: ScienceCourse.
+
+FinanceCourse :: Course.
+CmpeFinanceCourse :: FinanceCourse.
+CmseFinanceCourse :: FinanceCourse.
+BlgmFinanceCourse :: FinanceCourse. 
+
+EthicsCourse :: Course.
+CmpeEthicsCourse :: EthicsCourse.
+CmseEthicsCourse :: EthicsCourse.
+BlgmEthicsCourse :: EthicsCourse.
+
+
+/////////////////////
+CourseType[].
+
+TurkishCourse: CourseType.
+HistoryCourse: CourseType.
+TurkishOrHistoryCourse: CourseType.
+CmpeSummerTraining: CourseType.
+NormalCourse: CourseType.
+CmpeEthicsCourse: CourseType.
+CmpeFinanceCourse: CourseType.
+CmpeScienceCourse: CourseType.
+CmpeUniversityElective: CourseType.
+CmpeAreaElective: CourseType.
+CmpeGraduationProject1 : CourseType.
+CmpeGraduationProject2 : CourseType.
+
+TurkishCourse:: TurkishOrHistoryCourse.
+HistoryCourse:: TurkishOrHistoryCourse.
+
+/////////////////////////////
+
+Syllabus[| forProgram=>AcademicProgram,
+            syllabusEntry => SyllabusEntry        
+         |].
+
+SyllabusEntry[|
+         
+         whichYear=>YearType,
+         whichSemester=>Semester,
+         referenceCode=> \string,
+         course=>Course,
+         courseType => CourseType
+|].
+
+TranscriptEntry[|                  
+         syllabusEntry=>SyllabusEntry,
+         actualCourse=> Course,
+         courseTaken=>Course,
+         letterGrade=>Grade,
+         numeric_contribution => \float,
+         credit_counted => \integer,
+         computed_credit_counted(\integer) => \integer,
+         computed_numeric_contribution(\integer) => \integer
+|].
+
+TranscriptSemesterData[|
+         whichYear=> \integer,
+         whichSemester=>Semester,        
+         transcriptEntry => TranscriptEntry,// birden cok
+         gpa=> \float,           
+         cgpa=> \float,
+         status => Status,
+         registrationStatus => RegistrationStatus,
+         actualAcademicTerm => \integer,
+         realAcademicTerm => \integer, // including summer terms, excluding onLeaveOfAbsence
+         numeric_contribution => \float,
+         computed_credit_counted(\integer)=> \integer,
+         computed_numeric_contribution(\integer) => \float,
+         cumulative_credits => \float,
+         cumulative_contribution => \float,
+         how_many_courses_remaining => \integer,
+         how_many_credited_courses_remaining => \integer
+|].
+
+Transcript[|student=>Student,
+            syllabus => Syllabus,
+            semesterData => TranscriptSemesterData,
+            registrationStatus => RegistrationStatus
+          |].
+
+TurkishUndergraduateProgram:: TurkishProgram.
+TurkishUndergraduateProgram:: UndergraduateProgram.
+
+Department[| //deptID=> string,
+          deptName=> string,
+          inFaculty=> Faculty|].
+
+
+Instructor::Person [| works_in => Department|].
+
+Classroom [| //classId=> string,
+           location=> Building,
+           capacity=> \integer,
+           inDepartment=> department,
+           roomNumber=> \string|].
+
+
+Person[|id => \string,
+       gender => Gender,
+       date_of_birth => \date,
+       name => \string,
+       lastName => \string,
+       address => Address,
+       nationality => Nationality|].
+
+Nationality[].
+
+Gender[].
+
+Grade[||].
+
+RealGrade :: Grade.
+
+PassingGrade :: Grade.
+
+FailingGrade :: Grade.
+
+RegistrationStatus[].
+
+NormalSyllabusEntry::SyllabusEntry.
+
+RestricredElectiveScienceSyllabusEntry:: SyllabusEntry.
+
+RestricredElectiveFinanceSyllabusEntry:: SyllabusEntry.
+
+AreaElectiveSyllabusEntry:: SyllabusEntry.
+
+UniversityElectiveSyllabusEntry:: SyllabusEntry.
+
+EthicsElectiveSyllabusEntry:: SyllabusEntry.
+
+TurkishOrHistorySyllabusEntry:: SyllabusEntry.
+
+Address[|street=> \string,
+        city=> \string,
+        country=> \string|].
+
+AcademicProgram [| programName=> \string,
+                 programID=> \string,
+                 syllabus=> Syllabus,
+                 belongsTo=> Department|].
+
+
+University [|
+       universityName => \string,
+       locatedAt => Address|].
+
+Faculty [| facultyName => \string,
+         atUniversity => University|].
+
+
+CourseOpening [| groupNo => \integer,
+              ofCourse => Course,
+              year => \integer,
+              semester => Semester,
+              //id_courseOpening => \string,
+              teachingTimes => RoomDayPeriodDuration|].
+              //current_size => \integer].
+
+
+
+CourseOpeningRequest [| howManyGroups => \integer,
+                      ofCourse => Course,
+                      year => \integer,
+                      maxStudentSize => \integer,
+                      semester => Semester,
+                      forProgram => AcademicProgram|].
+
+Curriculum [|academicProgram=> AcademicProgram,
+            refCode=> \string,
+            courseName=> Course|].
+
+
+CurrentEnrollmentSize [|courseOpening=> CourseOpening,
+                       currentSize=> \integer|].
+
+TakesCourse [| courseOpening=> CourseOpening,
+              student=> Student,
+              grade=> \string|].
+
+Building[].
+Semester[].
+
+UndergraduateProgram::AcademicProgram.
+GraduateProgram:: AcademicProgram.
+TurkishProgram:: AcademicProgram.
+EnglishProgram:: AcademicProgram.
+
+EnglishUndergraduateProgram:: EnglishProgram.
+EnglishUndergraduateProgram::UndergraduateProgram.
+
+RoomDayPeriodDuration [| room => Classroom,
+                       day => Day,
+                       period => \integer,
+                       duration => \integer|].
+
+LectureRoomDayPeriodDuration::RoomDayPeriodDuration.
+
+LabRoomDayPeriodDuration::RoomDayPeriodDuration.

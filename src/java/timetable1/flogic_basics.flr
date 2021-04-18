@@ -1,0 +1,50 @@
+
+// load{'C:/Users/Pamilerin/Documents/NetBeansProjects/timetable1/src/timetable1/flogic_basics'}.
+
+
+person :: animal.
+animal::object.
+superman :: person.
+dangerous_hobby :: object.
+john:employee.				// INSTANCE : CLASS 
+employee::person.			// SUBCLASS :: SUPERCLASS
+secretary::employee.
+bob:person.
+tim:person.
+betty:employee.
+sally:secretary.
+
+person[age=>integer, 
+	kids=>person, 
+	salary(year)=>integer, 
+	hobbies=>hobby, 
+	believes_in=>something,
+	instances => person,
+	=> married(year),
+	=> %testmethod
+].
+
+mary:employee[			       // a more complex MOLECULE involving
+	age->29,		       // ... a SINGLE-VALUED method
+	kids -> {tim,leo,betty,bob},   // ... a MULTI-VALUED method
+	salary(1998) -> a_lot	       // ... a PARAMETERIZED method
+].
+
+father(mary):person[age->66].
+
+tim[hobbies -> {stamps, snowboard}].	// somebodies hobbies
+betty[hobbies ->{fishing,diving}].
+
+snowboard:dangerous_hobby.		// isn't it??
+diving:dangerous_hobby.
+
+?_X[self-> ?_X].			// define self
+
+
+tim[believes_in->luck].
+mary[believes_in->[magic,wand]].
+
+person[believes_in ->			// INHERITABLE method
+	   {something, something_else}].	
+
+person[instances -> ?X] :- ?X:person.   // NON-INHERITABLE method of person

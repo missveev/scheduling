@@ -1,0 +1,11 @@
+flora_symbol('FALL',0,\@,48,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(groupNumber,0,\@,19,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(hrm101,0,\@,26,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(maxStudentSize,0,\@,29,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(request_hrm101_1,0,\@,13,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(ofCourse,0,\@,24,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(forProgram,0,\@,39,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(year,0,\@,34,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol(semester,0,\@,46,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol('CourseOpeningRequest',0,\@,15,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
+flora_symbol('Undergraduate',0,\@,42,2,function_symbol,nontransactional_symbol,'course_opening_requests.flr').
